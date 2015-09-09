@@ -1,0 +1,292 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     11149,        283]
+NotebookOptionsPosition[     10562,        259]
+NotebookOutlinePosition[     10908,        274]
+CellTagsIndexPosition[     10865,        271]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Graphics", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
+       RowBox[{
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}], ",", " ", "100"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{"0", ",", "0"}], "}"}], ",", "20"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Circle", "[", 
+         RowBox[{
+          RowBox[{"{", "\[IndentingNewLine]", "\t\t\t", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"Cos", "[", 
+              RowBox[{"day", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", " ",
+              "100"}], ",", "\[IndentingNewLine]", "\t\t\t", 
+            RowBox[{
+             RowBox[{"Sin", "[", 
+              RowBox[{"day", " ", "*", " ", "2", " ", "Pi"}], " ", "]"}], " ",
+              "*", " ", "100"}]}], "}"}], ",", " ", "10"}], "]"}], ",", 
+        "\[IndentingNewLine]", "\t\t", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", "\t\t ", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0"}], "}"}], ",", "\[IndentingNewLine]", 
+           "\t\t ", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Cos", "[", 
+               RowBox[{"day", " ", "*", " ", "2", "Pi"}], " ", "]"}], " ", 
+              "*", " ", "100"}], ",", "\[IndentingNewLine]", "\t\t ", 
+             RowBox[{
+              RowBox[{"Sin", "[", 
+               RowBox[{"day", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
+              " ", "100"}]}], "}"}]}], "\[IndentingNewLine]", "}"}], "]"}], 
+        ",", "\[IndentingNewLine]", "\t        ", 
+        RowBox[{"Line", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", "\t\t", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Cos", "[", 
+               RowBox[{"day", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
+              " ", "100"}], ",", "     ", "\[IndentingNewLine]", 
+             "                  ", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"Sin", "[", 
+                RowBox[{"(", 
+                 RowBox[{"day", " ", "*", " ", "2", "Pi"}], ")"}], "]"}], " ",
+                "*", " ", "100"}], " ", "+", " ", "10"}]}], "}"}], ",", 
+           "\[IndentingNewLine]", "                  ", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"Cos", "[", 
+               RowBox[{"day", " ", "*", " ", "2", " ", "Pi"}], "]"}], " ", 
+              "*", " ", "100"}], ",", "\[IndentingNewLine]", "\t      ", 
+             RowBox[{
+              RowBox[{"(", 
+               RowBox[{
+                RowBox[{"Sin", "[", 
+                 RowBox[{"day", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
+                " ", "100"}], ")"}], " ", "-", " ", "10"}]}], "}"}]}], "}"}], 
+         "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+     "\[IndentingNewLine]", "\t\t", 
+     RowBox[{"PlotRange", "\[Rule]", " ", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "120"}], ",", " ", "120"}], "}"}], ",", " ", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"-", "120"}], ",", " ", "120"}], "}"}]}], "}"}]}]}], "]"}], 
+   ",", "\[IndentingNewLine]", "\t\t", 
+   RowBox[{"{", 
+    RowBox[{"day", ",", " ", "0", ",", " ", "1"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6507126676949577`*^9, 3.6507127212124224`*^9}, {
+  3.6507128683658667`*^9, 3.650713131360619*^9}, {3.6507131661990986`*^9, 
+  3.6507132388787117`*^9}, {3.6507132769244213`*^9, 3.65071335268892*^9}, {
+  3.650713410501587*^9, 3.650713559978431*^9}, {3.650713959959779*^9, 
+  3.650714025745671*^9}, {3.650714105611833*^9, 3.6507141074150324`*^9}, {
+  3.6507141406142406`*^9, 3.6507142895652113`*^9}, {3.6507143497362595`*^9, 
+  3.650714568524233*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`day$$ = 1., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`day$$], 0, 1}}, Typeset`size$$ = {360., {178., 182.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`day$17136$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`day$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`day$$, $CellContext`day$17136$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[{
+          Circle[{0, 0}, 100], 
+          Circle[{0, 0}, 20], 
+          
+          Circle[{Cos[($CellContext`day$$ 2) Pi] 100, 
+            Sin[($CellContext`day$$ 2) Pi] 100}, 10], 
+          
+          Line[{{0, 0}, {
+            Cos[($CellContext`day$$ 2) Pi] 100, 
+             Sin[($CellContext`day$$ 2) Pi] 100}}], 
+          
+          Line[{{Cos[($CellContext`day$$ 2) Pi] 100, 
+             Sin[($CellContext`day$$ 2) Pi] 100 + 10}, {
+            Cos[($CellContext`day$$ 2) Pi] 100, 
+             Sin[($CellContext`day$$ 2) Pi] 100 - 10}}]}], 
+        PlotRange -> {{-120, 120}, {-120, 120}}], 
+      "Specifications" :> {{$CellContext`day$$, 0, 1}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {223., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.6507141089630675`*^9, 3.6507142903457413`*^9, {3.6507145502820296`*^9, 
+   3.6507145694818726`*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Manipulate", "[", 
+   RowBox[{
+    RowBox[{"Show", "[", 
+     RowBox[{"Graphics", "[", 
+      RowBox[{"SectorChart", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"2", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"x", ",", "1"}], "}"}], ",", "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"1", ",", "1"}], "}"}], ","}], "\[IndentingNewLine]", "}"}],
+        "]"}], "]"}], "]"}], ",", "\[IndentingNewLine]", "\t", 
+    RowBox[{"{", 
+     RowBox[{"x", ",", " ", "0", ",", " ", "1"}], "}"}]}], "]"}], 
+  "\[IndentingNewLine]"}]], "Input",
+ CellChangeTimes->{{3.6507136528886104`*^9, 3.650713689208455*^9}, {
+  3.6507137481000557`*^9, 3.6507137674790196`*^9}, {3.6507148640820675`*^9, 
+  3.6507149326651974`*^9}, {3.6507149654181643`*^9, 3.6507149674655333`*^9}, {
+  3.6507150434103365`*^9, 3.6507150434953938`*^9}, {3.650717531344119*^9, 
+  3.6507175492400827`*^9}, {3.650717580104912*^9, 3.6507175932787247`*^9}, {
+  3.650730401310162*^9, 3.650730412940934*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{AstronomyConvenienceFunctions`Private`x$$ = 1., 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[AstronomyConvenienceFunctions`Private`x$$], 0, 1}}, 
+    Typeset`size$$ = {360., {178., 182.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = True, 
+    AstronomyConvenienceFunctions`Private`x$26059$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {AstronomyConvenienceFunctions`Private`x$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[
+        AstronomyConvenienceFunctions`Private`x$$, 
+         AstronomyConvenienceFunctions`Private`x$26059$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Show[
+        Graphics[
+         SectorChart[{{2, 1}, {
+           AstronomyConvenienceFunctions`Private`x$$, 1}, {1, 1}, Null}]]], 
+      "Specifications" :> {{AstronomyConvenienceFunctions`Private`x$$, 0, 1}},
+       "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{468., {223., 230.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6507148977235794`*^9, 3.6507149332255726`*^9}, 
+   3.6507149685602655`*^9, 3.650715044457036*^9, 3.650717550345823*^9, {
+   3.650717580811393*^9, 3.6507175938641233`*^9}, {3.650730406233447*^9, 
+   3.650730413508314*^9}}]
+}, Open  ]],
+
+Cell[BoxData["z"], "Input",
+ CellChangeTimes->{3.650725372748351*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6507148611931353`*^9, 3.6507148612481737`*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.650713814984799*^9, 3.650713815390069*^9}}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6507138128293505`*^9, 3.650713812877382*^9}}]
+},
+WindowSize->{1920, 997},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 4123, 97, 412, "Input"],
+Cell[4706, 121, 2252, 50, 470, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6995, 176, 1119, 24, 152, "Input"],
+Cell[8117, 202, 2066, 42, 470, "Output"]
+}, Open  ]],
+Cell[10198, 247, 69, 1, 31, "Input"],
+Cell[10270, 250, 96, 1, 31, "Input"],
+Cell[10369, 253, 92, 1, 31, "Input"],
+Cell[10464, 256, 94, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
