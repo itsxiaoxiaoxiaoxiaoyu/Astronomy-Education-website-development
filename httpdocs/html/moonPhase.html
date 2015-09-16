@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>AstroEdu - Moon Phase</title>
+    <meta name="generator" content="Bootply" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+        <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link href="../css/styles.css" rel="stylesheet">
+  </head>
+  <body>
+        <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html"><span>AstroEducation<span></a>
+            </div>
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-left top-nav">
+                <li class="active">
+                <a href="homePage.html"><p3>Home</p3></a>
+                </li>
+                <li>
+                <a href="homePage.html"><p3>About</p3></a>
+                </li>
+            </ul>
+             <form class="navbar-form navbar-right top-nav" role="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn">Search</button>
+              </form>
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#basicConcepts">
+                        <span>Basic Concepts ></span>
+                        </a>
+                        <ul id="basicConcepts" class="collapse">
+                            <li>
+                                <a href="#">Seasons</a>
+                            </li>
+                            <li>
+                                <a href="#">Coordinate System</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#EarthMoonSun">
+                        <span>Earth, Moon and Sun ></span>
+                        </a>
+                        <ul id="EarthMoonSun" class="collapse in">
+                            <li class="active">
+                                <a href="moonPhase.html">Moon Phase</a>
+                            </li>
+                            <li>
+                                <a href="#">Solar Eclipse</a>
+                            </li>
+                            <li>
+                                <a href="#">Lunar Eclipse</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#Planets">
+                        <span>Planets ></span>
+                        </a>
+                        <ul id="Planets" class="collapse">
+                            <li>
+                                <a href="#">Planet Movement</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#Galaxy">
+                        <span>Galaxy ></span>
+                        </a>
+                        <ul id="Galaxy" class="collapse">
+                            <li>
+                                <a href="#">Galaxy Stuff</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:;" data-toggle="collapse" data-target="#Universe">
+                        <span>Universe ></span>
+                        </a>
+                        <ul id="Universe" class="collapse">
+                            <li>
+                                <a href="#">The Big Bang</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+<!--page content here-->
+        <div id="page-wrapper">
+            <div>
+                <h1>How Moon Phases Work?</h1>
+                <hr/>
+                <br/>
+                <p>Lunar phases are simply described as the shapes of the moon visible on earth due to illumination by the sun’s light.</p>
+                <p>How does the moon orbit the Earth?</p>
+                <p>The moon follows an elliptical path around the Earth much like the elliptical orbit that the Earth has in relation to the sun. The moon is tidally locked with the Earth, meaning that the same lunar surface faces the Earth. These phases change due to the position of the moon in its own orbit around the Earth. Due to this correlation with orbit position, lunar phases change cyclically, starting with 0% of the moon visible and then can reach 100% visibility. We describe different lunar phases based on how much of the lunar surface is illuminated.</p>
+                </div>
+                <div class="center">
+                    <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+                    <script type="text/javascript">
+                    var cdf = new cdfplugin();
+                    cdf.setDefaultContent('<a href="http://www.wolfram.com/cdf-player/"><img  src="../cdf/moonPhaseDemo.png"></a>');
+                    cdf.embed('../cdf/moonPhaseDemo.cdf', 500, 500);
+                    </script>
+                </div>
+                <p>Why does the moon in each lunar phase appear in a different location in the sky?</p>
+                <p>While the moon is orbiting the Earth, the Earth is still orbiting the Sun. While this doesn’t affect the cyclical nature of the lunar phases, it does affect the relative position of the moon in the sky. Referring the figure above, we see the different lunar phases illustrated, with both the light and dark hemispheres of the moon. There are four principal lunar phases: first quarter, full, third quarter, and new. These instances are the differences between the lunar celestial longitude and solar longitude at 0◦, 90◦, 180◦, 270◦. As the lunar phases approach full, the moon is said to be “waxing” and “waning” when the phases approaches new. Each of the four principle phases last about 7.38 days, transitioning through gibbous and crescent states. These lunar phases are also visible at different times during the solar day due to the moon’s current position in the lunar orbit.</p>
+            <div>
+
+            </div>
+        </div>
+    </div>
+    <!-- /#wrapper -->
+    <script src="../js/jquery/jquery.min.js"></script>
+    <script src="../js/bootstrap/bootstrap.min.js"></script>
+  </body>
+</html>
