@@ -23,166 +23,14 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[      1064,         20]
-NotebookDataLength[      9347,        250]
-NotebookOptionsPosition[      9934,        247]
-NotebookOutlinePosition[     10278,        262]
-CellTagsIndexPosition[     10235,        259]
+NotebookDataLength[      3861,         94]
+NotebookOptionsPosition[      4523,         94]
+NotebookOutlinePosition[      4867,        109]
+CellTagsIndexPosition[      4824,        106]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
-
-Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{
-  RowBox[{"centripetal", "[", 
-   RowBox[{"t_", ",", " ", "r_", ",", " ", "l_"}], "]"}], " ", ":=", " ", 
-  RowBox[{
-   RowBox[{"1", "/", "3"}], " ", "*", " ", "9.81", " ", "*", " ", 
-   SuperscriptBox["t", "3"], "*", "r", "*", "rotationalSpeedEarth", "*", 
-   RowBox[{"Cos", "[", 
-    RowBox[{"l", "*", 
-     RowBox[{"Pi", "/", "180"}]}], "]"}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"currentHeight", "[", 
-   RowBox[{"h_", ",", "t_"}], "]"}], " ", ":=", " ", 
-  RowBox[{
-   RowBox[{"h", "/", "100"}], "-", 
-   RowBox[{".5", "*", ".981", 
-    SuperscriptBox["t", "2"]}]}]}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{"rotationalSpeedEarth", " ", ":=", " ", 
-   RowBox[{"0.0042", "  ", "Degree"}]}], 
-  "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"Graphics", "[", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{
-       RowBox[{"EdgeForm", "[", "Black", "]"}], ",", "\[IndentingNewLine]", 
-       RowBox[{"(*", "sky", "*)"}], 
-       RowBox[{"Polygon", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{
-           RowBox[{"{", 
-            RowBox[{"0", ",", "0"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "0"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"1", ",", "1"}], "}"}], ",", 
-           RowBox[{"{", 
-            RowBox[{"0", ",", "1"}], "}"}]}], "}"}], ",", 
-         RowBox[{"VertexColors", "\[Rule]", 
-          RowBox[{"{", 
-           RowBox[{"White", ",", "White", ",", "Blue", ",", "Blue"}], 
-           "}"}]}]}], "]"}], ",", "\[IndentingNewLine]", 
-       RowBox[{"(*", "tower", "*)"}], " ", "Gray", ",", " ", 
-       RowBox[{"Rectangle", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{".25", ",", ".1"}], "}"}], ",", 
-         RowBox[{"{", 
-          RowBox[{".45", ",", ".8"}], "}"}]}], "]"}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"initial", " ", "height", " ", "indicator"}], "*)"}], " ", 
-       "Yellow", ",", " ", 
-       RowBox[{"Triangle", "[", 
-        RowBox[{"{", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{".40", ",", " ", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"h", "+", "10"}], ")"}], "/", "100"}], "-", "0.03"}]}],
-            "}"}], ",", " ", 
-          RowBox[{"{", 
-           RowBox[{".40", ",", " ", 
-            RowBox[{
-             RowBox[{
-              RowBox[{"(", 
-               RowBox[{"h", "+", "10"}], ")"}], "/", "100"}], "+", "0.03"}]}],
-            "}"}], ",", " ", 
-          RowBox[{"{", 
-           RowBox[{".46", ",", " ", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"h", "+", "10"}], ")"}], "/", "100"}]}], "}"}]}], "}"}],
-         "]"}], ",", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"green", " ", "grass"}], "*)"}], " ", 
-       RowBox[{"RGBColor", "[", 
-        RowBox[{
-         RowBox[{"50", "/", "256"}], ",", " ", 
-         RowBox[{"205", "/", "256"}], ",", " ", 
-         RowBox[{"50", "/", "256"}]}], "]"}], ",", " ", 
-       RowBox[{"Rectangle", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{"0", ",", "0"}], "}"}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"1", ",", ".1"}], "}"}]}], "]"}], ",", 
-       "\[IndentingNewLine]", 
-       RowBox[{"(*", "ball", "*)"}], " ", "Red", ",", " ", 
-       RowBox[{"Disk", "[", 
-        RowBox[{
-         RowBox[{"{", 
-          RowBox[{".5", " ", ",", 
-           RowBox[{"currentHeight", "[", 
-            RowBox[{
-             RowBox[{"(", 
-              RowBox[{"h", "+", "10"}], ")"}], ",", "t"}], "]"}]}], "}"}], 
-         ",", 
-         RowBox[{"m", "/", "25"}]}], "]"}], ",", "\[IndentingNewLine]", 
-       "White", ",", 
-       RowBox[{"Text", "[", 
-        RowBox[{
-         RowBox[{"\"\<seconds\>\"", 
-          RowBox[{"ToString", "[", "t", "]"}]}], ",", " ", 
-         RowBox[{"{", 
-          RowBox[{"0.5", ",", ".9"}], "}"}]}], "]"}]}], "}"}], ",", 
-     "\[IndentingNewLine]", 
-     RowBox[{"PlotRange", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{
-        RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}], ",", 
-        RowBox[{"{", 
-         RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}], ",", 
-     RowBox[{"ImageSize", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"280", ",", "420"}], "}"}]}]}], "]"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"t", ",", "0", ",", "\"\<time (s)\>\""}], "}"}], ",", "0", ",", 
-     RowBox[{
-      RowBox[{"(", 
-       RowBox[{
-        RowBox[{
-         RowBox[{"h", "/", "100"}], "/", ".5"}], "/", ".981"}], ")"}], "^", 
-      ".5"}], ",", 
-     RowBox[{"ControlType", "\[Rule]", "Trigger"}], ",", " ", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
-   "\[IndentingNewLine]", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"m", ",", ".5", ",", "\"\<mass (kg)\>\""}], "}"}], ",", ".1", 
-     ",", "1", ",", " ", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", " ", 
-   RowBox[{"{", 
-    RowBox[{
-     RowBox[{"{", 
-      RowBox[{"h", ",", " ", "50", ",", " ", "\"\<height (m)\>\""}], "}"}], 
-     ",", " ", "0", ",", " ", "70", ",", " ", 
-     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
-  "]"}]}], "Input"],
-
 Cell[BoxData[
  TagBox[
   StyleBox[
@@ -243,7 +91,6 @@ Cell[BoxData[
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
  CellChangeTimes->{3.652696408403053*^9}]
-}, Open  ]]
 },
 WindowSize->{1350, 685},
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
@@ -261,14 +108,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[CellGroupData[{
-Cell[1486, 35, 5374, 148, 292, "Input"],
-Cell[6863, 185, 3055, 59, 617, "Output"]
-}, Open  ]]
+Cell[1464, 33, 3055, 59, 584, "Output"]
 }
 ]
 *)
 
 (* End of internal cache information *)
 
-(* NotebookSignature Xvp44Zf5KYdasBw8ChK08l41 *)
+(* NotebookSignature supz2jdEdVNZFA1zjo6@PhMa *)
