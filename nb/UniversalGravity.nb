@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     11326,        272]
-NotebookOptionsPosition[     11006,        256]
-NotebookOutlinePosition[     11352,        271]
-CellTagsIndexPosition[     11309,        268]
+NotebookDataLength[     12417,        289]
+NotebookOptionsPosition[     12099,        273]
+NotebookOutlinePosition[     12443,        288]
+CellTagsIndexPosition[     12400,        285]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -21,18 +21,18 @@ Notebook[{
 
 Cell[CellGroupData[{
 Cell[BoxData[{
- RowBox[{"dist", " ", ":=", " ", "120"}], "\[IndentingNewLine]", 
+ RowBox[{"Distance", " ", ":=", " ", "120"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
    RowBox[{"baryCenter", "[", 
-    RowBox[{"b1_", ",", " ", "b2_", ",", " ", "dist_"}], "]"}], " ", ":=", 
-   " ", 
+    RowBox[{"b1_", ",", " ", "b2_", ",", " ", "Distance_"}], "]"}], " ", ":=",
+    " ", 
    RowBox[{
     RowBox[{"(", 
      RowBox[{"b1", "  ", "/", " ", 
       RowBox[{"(", 
        RowBox[{"b1", " ", "+", " ", "b2"}], ")"}]}], ")"}], " ", "*", " ", 
-    "dist"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
+    "Distance"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"Manipulate", "[", 
   RowBox[{
    RowBox[{"Show", "[", 
@@ -48,27 +48,27 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"20", " ", "+", " ", 
              RowBox[{"baryCenter", "[", 
-              RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}], 
-             "+", " ", 
+              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+              "]"}], "+", " ", 
              RowBox[{
               RowBox[{"Cos", "[", 
                RowBox[{
                 RowBox[{"(", 
-                 RowBox[{"0.5", " ", "+", " ", "time"}], " ", ")"}], "*", " ",
+                 RowBox[{"0.5", " ", "+", " ", "Time"}], " ", ")"}], "*", " ",
                  "2", "Pi"}], "]"}], " ", "*", " ", 
               RowBox[{"baryCenter", "[", 
-               RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], 
-               "]"}]}]}], ",", " ", 
+               RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}],
+                "]"}]}]}], ",", " ", 
             RowBox[{"50", " ", "+", " ", 
              RowBox[{
               RowBox[{"Sin", "[", 
                RowBox[{
                 RowBox[{"(", 
-                 RowBox[{"0.5", " ", "+", " ", "time"}], ")"}], "*", "2", 
+                 RowBox[{"0.5", " ", "+", " ", "Time"}], ")"}], "*", "2", 
                 "Pi"}], "]"}], "*", " ", 
               RowBox[{"baryCenter", "[", 
-               RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], 
-               "]"}]}]}]}], "}"}], ",", " ", "body1"}], "]"}], ",", 
+               RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}],
+                "]"}]}]}]}], "}"}], ",", " ", "Planet1"}], "]"}], ",", 
         "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{"body", " ", "2"}], "*)"}], " ", "Green", ",", " ", 
@@ -78,27 +78,29 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"20", " ", "+", " ", 
              RowBox[{"baryCenter", "[", 
-              RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}], 
-             "+", " ", 
+              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+              "]"}], "+", " ", 
              RowBox[{
               RowBox[{"Cos", "[", 
-               RowBox[{"time", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
+               RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
               " ", 
               RowBox[{"(", 
-               RowBox[{"dist", " ", "-", " ", 
+               RowBox[{"Distance", " ", "-", " ", 
                 RowBox[{"baryCenter", "[", 
-                 RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], 
+                 RowBox[{
+                 "Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
                  "]"}]}], ")"}]}]}], ",", " ", 
             RowBox[{"50", " ", "+", " ", 
              RowBox[{
               RowBox[{"Sin", "[", 
-               RowBox[{"time", " ", "*", " ", "2", "Pi"}], "]"}], "*", 
+               RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], "*", 
               RowBox[{"(", 
-               RowBox[{"dist", " ", "-", " ", 
+               RowBox[{"Distance", " ", "-", " ", 
                 RowBox[{"baryCenter", "[", 
-                 RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], 
-                 "]"}]}], ")"}]}]}]}], "}"}], ",", " ", "body2"}], "]"}], ",",
-         "\[IndentingNewLine]", 
+                 RowBox[{
+                 "Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+                 "]"}]}], ")"}]}]}]}], "}"}], ",", " ", "Planet2"}], "]"}], 
+        ",", "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{"orbit", " ", "1"}], "*)"}], " ", "Black", ",", " ", 
         RowBox[{"Circle", "[", 
@@ -107,11 +109,11 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"20", " ", "+", " ", 
              RowBox[{"baryCenter", "[", 
-              RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}]}],
-             ",", " ", "50"}], "}"}], ",", " ", 
+              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+              "]"}]}], ",", " ", "50"}], "}"}], ",", " ", 
           RowBox[{"baryCenter", "[", 
-           RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}]}], 
-         "]"}], ",", "\[IndentingNewLine]", 
+           RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+           "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
         RowBox[{"(*", 
          RowBox[{"orbit", " ", "2"}], "*)"}], " ", "Black", ",", " ", 
         RowBox[{"Circle", "[", 
@@ -120,72 +122,82 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"20", " ", "+", " ", 
              RowBox[{"baryCenter", "[", 
-              RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}]}],
-             ",", " ", "50"}], "}"}], ",", " ", 
-          RowBox[{"dist", " ", "-", " ", 
+              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+              "]"}]}], ",", " ", "50"}], "}"}], ",", " ", 
+          RowBox[{"Distance", " ", "-", " ", 
            RowBox[{"baryCenter", "[", 
-            RowBox[{"body1", ",", " ", "body2", ",", " ", "dist"}], "]"}]}]}],
-          "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+            RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+            "]"}]}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
      RowBox[{"PlotRange", "\[Rule]", " ", 
       RowBox[{"{", 
        RowBox[{
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"-", "100"}], ",", " ", "250"}], "}"}], ",", " ", 
+          RowBox[{"-", "100"}], ",", " ", "300"}], "}"}], ",", " ", 
         RowBox[{"{", 
          RowBox[{
-          RowBox[{"-", "100"}], ",", " ", "250"}], "}"}]}], "}"}]}]}], "]"}], 
+          RowBox[{"-", "100"}], ",", " ", "300"}], "}"}]}], "}"}]}]}], "]"}], 
    ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
-    RowBox[{"body1", ",", " ", "10", ",", " ", "100"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Planet1", ",", " ", "10", ",", " ", "\"\<Planet 1 mass\>\""}], 
+      "}"}], ",", "10", ",", " ", "100", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
-    RowBox[{"body2", ",", " ", "10", ",", " ", "100"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Planet2", ",", " ", "10", ",", " ", "\"\<Planet 2 mass\>\""}], 
+      "}"}], ",", "10", ",", " ", "100", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
-    RowBox[{"dist", ",", " ", "1", ",", " ", "200"}], "}"}], ",", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"Distance", ",", " ", "1", ",", " ", "\"\<Distance Apart\>\""}],
+       "}"}], ",", "1", ",", " ", "200", ",", " ", 
+     RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
-    RowBox[{"time", ",", " ", "0", ",", " ", "1"}], "}"}]}], 
+    RowBox[{"Time", ",", " ", "0", ",", " ", "1"}], "}"}]}], 
   "\[IndentingNewLine]", "]"}]}], "Input",
  CellChangeTimes->CompressedData["
-1:eJwdxU8oQwEAB+BnPbVYZOq9tV22V7bayWrNSCtycNiBXajJWC1KbahNUqSe
-HcbJQXIktldbW6j9ISNKpEYa0dJWkm2tWEoz/97vHb4+ld1lcYgIgpDzsPm0
-OFlpK3b52ewsfuromcfyieAitvYvL2Gx7nMVaxn3Dh5JNXBYJqFC+Ma7sYeZ
-md0oHosdH+Dv+0gSO8OmS/yYplN4uvnwBc+Ve98xtTYqLA1riC/+oCJC4teW
-XB0ODNc34X3tA40LbJ8Mm25LamzMl4UDWZkOZ5QGPb7iQm58ntv24OeMgcVv
-mXbhgoTcxMlu7gjrO313eEu0ksfk2UUJj09ZKzhuP/nBjbTtF1vS65IqfyId
-FY4ZCRqL45RwK/Mhxy6mVoGv/4JK7Ff51HghIR3Azio1iL1mzRCucZRt+B8X
-c+Gb
+1:eJwdxU0ogwEABuBva7LYyJZtGbWtbLU5WGlGa7WlOOzALhQZq0UpQ41QpGaH
+2WlJciS21bSF2g8ZUSI10vy1tElia8VSmvnb+x2eHqHRrDdRCYKoKcC6o/RI
+rjGtcVkTk/ihuWUGVw1553B3x8I8pss/nVgqsmzgvmiZB/MYnE18aVvZxqKJ
+rQAeCB7s4u8bfwQP+9Rn+D7GjeIx9t4zns62vWPOUj85yychvgp7+X4afqlN
+lmB3b2kF3pHecXHK2s7D6quMGCtfs+TuBE+O4wJFAz73bFrwSXJ9HD/FFVb8
+Fm8iTzFoqzii9ezjBpX9Gq9RHa+YdnyawYOj3TkcMh7+4HKu4RfrY8uMfOFw
+LEAeVBJcTA9xyOtFH1XYLCri44s/rwC7hHYxng2zOvFwntOFbTpJD6aYsgb8
+yI5RmMq0xilrK8aVYVkdnmq9VeFFlkeDHdVMLf4HErfynQ==
   "]],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`body1$$ = 15.7, $CellContext`body2$$ = 
-    40.400000000000006`, $CellContext`dist$$ = 106.2, 
-    CloudObject`Private`time$$ = 1., Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
-    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{
-      Hold[$CellContext`body1$$], 10, 100}, {
-      Hold[$CellContext`body2$$], 10, 100}, {
-      Hold[$CellContext`dist$$], 1, 200}, {
-      Hold[CloudObject`Private`time$$], 0, 1}}, Typeset`size$$ = {
+   DynamicModuleBox[{$CellContext`Distance$$ = 160., $CellContext`Planet1$$ = 
+    35.7, $CellContext`Planet2$$ = 15.2, $CellContext`Time$$ = 0., 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`Planet1$$], 10, "Planet 1 mass"}, 10, 100}, {{
+       Hold[$CellContext`Planet2$$], 10, "Planet 2 mass"}, 10, 100}, {{
+       Hold[$CellContext`Distance$$], 1, "Distance Apart"}, 1, 200}, {
+      Hold[$CellContext`Time$$], 0, 1}}, Typeset`size$$ = {
     360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`body1$14541$$ = 
-    0, $CellContext`body2$14542$$ = 0, $CellContext`dist$14543$$ = 0, 
-    CloudObject`Private`time$14544$$ = 0}, 
+    Typeset`skipInitDone$$ = True, $CellContext`Planet1$3792$$ = 
+    0, $CellContext`Planet2$3793$$ = 0, $CellContext`Distance$3794$$ = 
+    0, $CellContext`Time$3795$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`body1$$ = 10, $CellContext`body2$$ = 
-        10, $CellContext`dist$$ = 1, CloudObject`Private`time$$ = 0}, 
+      "Variables" :> {$CellContext`Distance$$ = 1, $CellContext`Planet1$$ = 
+        10, $CellContext`Planet2$$ = 10, $CellContext`Time$$ = 0}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`body1$$, $CellContext`body1$14541$$, 0], 
-        Hold[$CellContext`body2$$, $CellContext`body2$14542$$, 0], 
-        Hold[$CellContext`dist$$, $CellContext`dist$14543$$, 0], 
-        Hold[
-        CloudObject`Private`time$$, CloudObject`Private`time$14544$$, 0]}, 
+        Hold[$CellContext`Planet1$$, $CellContext`Planet1$3792$$, 0], 
+        Hold[$CellContext`Planet2$$, $CellContext`Planet2$3793$$, 0], 
+        Hold[$CellContext`Distance$$, $CellContext`Distance$3794$$, 0], 
+        Hold[$CellContext`Time$$, $CellContext`Time$3795$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
@@ -193,41 +205,44 @@ Cell[BoxData[
          Typeset`skipInitDone$$}, "Body" :> Show[
         Graphics[{Blue, 
           
-          Disk[{20 + $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$] + 
-            Cos[(0.5 + CloudObject`Private`time$$) 2 
-               Pi] $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$], 50 + 
-            Sin[(0.5 + CloudObject`Private`time$$) 2 
-               
-               Pi] $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$]}, $CellContext`body1$$], Green, 
+          Disk[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$] + 
+            Cos[(0.5 + $CellContext`Time$$) 2 
+               Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$], 50 + 
+            Sin[(0.5 + $CellContext`Time$$) 2 
+               Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]}, $CellContext`Planet1$$], 
+          Green, 
           
-          Disk[{20 + $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$] + 
-            Cos[CloudObject`Private`time$$ 2 
-               Pi] ($CellContext`dist$$ - \
-$CellContext`baryCenter[$CellContext`body1$$, $CellContext`body2$$, \
-$CellContext`dist$$]), 50 + 
-            Sin[CloudObject`Private`time$$ 2 
-               Pi] ($CellContext`dist$$ - \
-$CellContext`baryCenter[$CellContext`body1$$, $CellContext`body2$$, \
-$CellContext`dist$$])}, $CellContext`body2$$], Black, 
+          Disk[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$] + 
+            Cos[$CellContext`Time$$ 2 
+               Pi] ($CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$]), 50 + 
+            Sin[$CellContext`Time$$ 2 
+               Pi] ($CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$])}, $CellContext`Planet2$$], Black, 
           
-          Circle[{20 + $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$], 50}, 
-           $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$]], Black, 
+          Circle[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$], 50}, 
+           $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]], Black, 
           
-          Circle[{20 + $CellContext`baryCenter[$CellContext`body1$$, \
-$CellContext`body2$$, $CellContext`dist$$], 
-            50}, $CellContext`dist$$ - \
-$CellContext`baryCenter[$CellContext`body1$$, $CellContext`body2$$, \
-$CellContext`dist$$]]}], PlotRange -> {{-100, 250}, {-100, 250}}], 
-      "Specifications" :> {{$CellContext`body1$$, 10, 
-         100}, {$CellContext`body2$$, 10, 100}, {$CellContext`dist$$, 1, 
-         200}, {CloudObject`Private`time$$, 0, 1}}, "Options" :> {}, 
-      "DefaultOptions" :> {}],
+          Circle[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$], 
+            50}, $CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$]]}], PlotRange -> {{-100, 250}, {-100, 250}}], 
+      "Specifications" :> {{{$CellContext`Planet1$$, 10, "Planet 1 mass"}, 10,
+          100, Appearance -> 
+         "Labeled"}, {{$CellContext`Planet2$$, 10, "Planet 2 mass"}, 10, 100, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`Distance$$, 1, "Distance Apart"}, 1, 200, 
+         Appearance -> "Labeled"}, {$CellContext`Time$$, 0, 1}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
      ImageSizeCache->{411., {264., 271.}},
      SingleEvaluation->True],
     Deinitialization:>None,
@@ -251,11 +266,13 @@ $CellContext`dist$$]]}], PlotRange -> {{-100, 250}, {-100, 250}}],
    3.6532284092642865`*^9}, {3.6532284405304155`*^9, 3.65322849155586*^9}, 
    3.6532285313309517`*^9, 3.6532286466357174`*^9, 3.65322872952264*^9, 
    3.6532287606604815`*^9, {3.6532288064687934`*^9, 3.653228853097894*^9}, 
-   3.6532292491557236`*^9, {3.6532292831656933`*^9, 3.6532293120123615`*^9}}]
+   3.6532292491557236`*^9, {3.6532292831656933`*^9, 3.6532293120123615`*^9}, 
+   3.6532653670245924`*^9, 3.653265467703374*^9, 3.6532658230205507`*^9, 
+   3.653265897326641*^9}]
 }, Open  ]]
 },
-WindowSize->{1366, 685},
-WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+WindowSize->{958, 988},
+WindowMargins->{{-7, Automatic}, {Automatic, 0}},
 FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
 StyleDefinitions->"Default.nb"
 ]
@@ -271,8 +288,8 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 5552, 137, 332, "Input"],
-Cell[6135, 161, 4855, 92, 585, "Output"]
+Cell[580, 22, 6267, 151, 452, "Input"],
+Cell[6850, 175, 5233, 95, 552, "Output"]
 }, Open  ]]
 }
 ]
