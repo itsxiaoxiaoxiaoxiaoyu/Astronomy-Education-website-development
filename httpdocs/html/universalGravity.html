@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
-    <title>AstroEdu - Home</title>
+    <title>AstroEdu - Moon Phase</title>
     <meta name="generator" content="Bootply" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <link href="../css/bootstrap/bootstrap.min.css" rel="stylesheet">
@@ -59,17 +59,14 @@
                             <li>
                                 <a href="fallingLH.html">Falling Objects</a>
                             </li>
-                            <li>
-                                <a href="universalGravity.html">Universal gravity</a>
-                            </li>
                         </ul>
                     </li>
                     <li>
                         <a href="javascript:;" data-toggle="collapse" data-target="#EarthMoonSun">
                         <span>Earth, Moon and Sun ></span>
                         </a>
-                        <ul id="EarthMoonSun" class="collapse">
-                            <li>
+                        <ul id="EarthMoonSun" class="collapse in">
+                            <li class="active">
                                 <a href="moonPhase.html">Moon Phase</a>
                             </li>
                             <li>
@@ -117,29 +114,22 @@
 <!--page content here-->
         <div id="page-wrapper">
             <div>
-                <h1>Ready for some astronomy?</h1>
+                <h1>Introduction to universal gravity</h1>
+                <hr/>
                 <br/>
-                <h2> <-- Check out some interesting topics here</h2>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
+                <p>this should be the content</p>
+                </div>
+                <div class="center">
+                    <script type="text/javascript" src="http://www.wolfram.com/cdf-player/plugin/v2.1/cdfplugin.js"></script>
+                    <script type="text/javascript">
+                    var cdf = new cdfplugin();
+                    cdf.setDefaultContent('<a href="http://www.wolfram.com/cdf-player/"><img  src="../cdf/moonPhaseDemo.png"></a>');
+                    cdf.embed('../cdf/moonPhaseDemo.cdf', 500, 500);
+                    </script>
+                </div>
+                <p>this should be the content</p>
             <div>
-                <h3>This Week’s Sky At a Glance</h3>
-                <hr/>
-            </div>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <div>
-                <h3>Recommanded Resources</h3>
-                <hr/>
+
             </div>
         </div>
     </div>
