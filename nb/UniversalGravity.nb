@@ -10,134 +10,585 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     12417,        289]
-NotebookOptionsPosition[     12099,        273]
-NotebookOutlinePosition[     12443,        288]
-CellTagsIndexPosition[     12400,        285]
+NotebookDataLength[     51072,       1304]
+NotebookOptionsPosition[     50587,       1283]
+NotebookOutlinePosition[     50931,       1298]
+CellTagsIndexPosition[     50888,       1295]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
 Notebook[{
 
 Cell[CellGroupData[{
-Cell[BoxData[{
- RowBox[{"Distance", " ", ":=", " ", "120"}], "\[IndentingNewLine]", 
- RowBox[{
-  RowBox[{
-   RowBox[{"baryCenter", "[", 
-    RowBox[{"b1_", ",", " ", "b2_", ",", " ", "Distance_"}], "]"}], " ", ":=",
-    " ", 
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+   RowBox[{"(*", 
+    RowBox[{"x", " ", "center", " ", "for", " ", "body", " ", "1"}], "*)"}], 
    RowBox[{
-    RowBox[{"(", 
-     RowBox[{"b1", "  ", "/", " ", 
-      RowBox[{"(", 
-       RowBox[{"b1", " ", "+", " ", "b2"}], ")"}]}], ")"}], " ", "*", " ", 
-    "Distance"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
- RowBox[{"Manipulate", "[", 
-  RowBox[{
-   RowBox[{"Show", "[", 
     RowBox[{
-     RowBox[{"Graphics", "[", 
-      RowBox[{"{", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{"body", " ", "1"}], "*)"}], " ", 
-       RowBox[{"Blue", ",", " ", 
-        RowBox[{"Disk", "[", 
+     RowBox[{"aCenterX", " ", "=", " ", 
+      RowBox[{"20", " ", "+", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], "]"}],
+        "+", " ", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
          RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"20", " ", "+", " ", 
-             RowBox[{"baryCenter", "[", 
-              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-              "]"}], "+", " ", 
-             RowBox[{
-              RowBox[{"Cos", "[", 
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{"0.5", " ", "+", " ", "Time"}], " ", ")"}], "*", " ",
-                 "2", "Pi"}], "]"}], " ", "*", " ", 
-              RowBox[{"baryCenter", "[", 
-               RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}],
-                "]"}]}]}], ",", " ", 
-            RowBox[{"50", " ", "+", " ", 
-             RowBox[{
-              RowBox[{"Sin", "[", 
-               RowBox[{
-                RowBox[{"(", 
-                 RowBox[{"0.5", " ", "+", " ", "Time"}], ")"}], "*", "2", 
-                "Pi"}], "]"}], "*", " ", 
-              RowBox[{"baryCenter", "[", 
-               RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}],
-                "]"}]}]}]}], "}"}], ",", " ", "Planet1"}], "]"}], ",", 
-        "\[IndentingNewLine]", 
-        RowBox[{"(*", 
-         RowBox[{"body", " ", "2"}], "*)"}], " ", "Green", ",", " ", 
-        RowBox[{"Disk", "[", 
+          RowBox[{"(", 
+           RowBox[{"0.5", " ", "+", " ", "Time"}], " ", ")"}], "*", " ", "2", 
+          "Pi"}], "]"}], " ", "*", " ", 
+        RowBox[{"baryCenter", "[", 
+         RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+         "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"y", " ", "center", " ", "for", " ", "body", " ", "1"}], "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{"aCenterY", " ", "=", " ", 
+      RowBox[{"50", " ", "+", " ", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
          RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"20", " ", "+", " ", 
-             RowBox[{"baryCenter", "[", 
-              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-              "]"}], "+", " ", 
-             RowBox[{
-              RowBox[{"Cos", "[", 
-               RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", 
-              " ", 
-              RowBox[{"(", 
-               RowBox[{"Distance", " ", "-", " ", 
-                RowBox[{"baryCenter", "[", 
-                 RowBox[{
-                 "Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-                 "]"}]}], ")"}]}]}], ",", " ", 
-            RowBox[{"50", " ", "+", " ", 
-             RowBox[{
-              RowBox[{"Sin", "[", 
-               RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], "*", 
-              RowBox[{"(", 
-               RowBox[{"Distance", " ", "-", " ", 
-                RowBox[{"baryCenter", "[", 
-                 RowBox[{
-                 "Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-                 "]"}]}], ")"}]}]}]}], "}"}], ",", " ", "Planet2"}], "]"}], 
-        ",", "\[IndentingNewLine]", 
-        RowBox[{"(*", 
-         RowBox[{"orbit", " ", "1"}], "*)"}], " ", "Black", ",", " ", 
-        RowBox[{"Circle", "[", 
-         RowBox[{
-          RowBox[{"{", 
-           RowBox[{
-            RowBox[{"20", " ", "+", " ", 
-             RowBox[{"baryCenter", "[", 
-              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-              "]"}]}], ",", " ", "50"}], "}"}], ",", " ", 
+          RowBox[{"(", 
+           RowBox[{"0.5", " ", "+", " ", "Time"}], ")"}], "*", "2", "Pi"}], 
+         "]"}], "*", " ", 
+        RowBox[{"baryCenter", "[", 
+         RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+         "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"x", " ", "center", " ", "for", " ", "body", " ", "2"}], "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{"bCenterX", "=", 
+      RowBox[{"20", " ", "+", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], "]"}],
+        "+", " ", 
+       RowBox[{
+        RowBox[{"Cos", "[", 
+         RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", " ", 
+        RowBox[{"(", 
+         RowBox[{"Distance", " ", "-", " ", 
           RowBox[{"baryCenter", "[", 
            RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-           "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
-        RowBox[{"(*", 
-         RowBox[{"orbit", " ", "2"}], "*)"}], " ", "Black", ",", " ", 
-        RowBox[{"Circle", "[", 
+           "]"}]}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"y", " ", "center", " ", "for", " ", "body", " ", "2"}], "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{"bCenterY", "=", 
+      RowBox[{"50", " ", "+", " ", 
+       RowBox[{
+        RowBox[{"Sin", "[", 
+         RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], "*", 
+        RowBox[{"(", 
+         RowBox[{"Distance", " ", "-", " ", 
+          RowBox[{"baryCenter", "[", 
+           RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+           "]"}]}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"orbit", " ", "1", " ", "center", " ", "x"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"xCenter", " ", "=", " ", 
+      RowBox[{"20", " ", "+", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+        "]"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"orbit", " ", "1"}], "*)"}], " ", 
+     RowBox[{"a", " ", "=", " ", 
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", 
+        RowBox[{"baryCenter", "[", 
+         RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+         "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"orbit", " ", "2"}], "*)"}], " ", 
+     RowBox[{"b", " ", "=", " ", 
+      RowBox[{"Circle", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", 
+        RowBox[{"Distance", " ", "-", " ", 
+         RowBox[{"baryCenter", "[", 
+          RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+          "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"line", " ", "between", " ", "two", " ", "centers"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"line", " ", "=", 
+      RowBox[{"Line", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"aCenterX", ",", " ", "aCenterY"}], "}"}], ",", 
+         "\[IndentingNewLine]", 
+         RowBox[{"{", 
+          RowBox[{"bCenterX", ",", " ", "bCenterY"}], "}"}]}], 
+        "\[IndentingNewLine]", "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"center", " ", "of", " ", "mass"}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"centerMass", "=", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", "3"}], "]"}]}],
+      ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"body", " ", "1"}], "*)"}], " ", 
+     RowBox[{"Body1", "=", " ", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"aCenterX", ",", " ", "aCenterY"}], "}"}], ",", " ", "10"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"body", " ", "2"}], "*)"}], " ", 
+     RowBox[{"Body2", " ", "=", " ", 
+      RowBox[{"Disk", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"bCenterX", ",", " ", "bCenterY"}], "}"}], ",", " ", "10"}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"Show", "[", 
+      RowBox[{
+       RowBox[{"Graphics", "[", 
+        RowBox[{"{", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{"body", " ", "1"}], "*)"}], " ", 
+         RowBox[{"Blue", ",", " ", "Body1", ",", "\[IndentingNewLine]", 
+          RowBox[{"(*", 
+           RowBox[{"body", " ", "2"}], "*)"}], " ", "Green", ",", " ", 
+          "Body2"}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"cond1", "\[Equal]", "1"}], ",", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{"Blue", ",", "a"}], "}"}], "]"}], ",", 
+         RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"cond2", "\[Equal]", "1"}], ",", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{"Green", ",", "b"}], "}"}], "]"}], ",", 
+         RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"cond3", "\[Equal]", "1"}], ",", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{"Black", ",", "line"}], "}"}], "]"}], ",", 
+         RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"If", "[", 
+        RowBox[{
+         RowBox[{"cond3", "\[Equal]", "1"}], ",", 
+         RowBox[{"Graphics", "[", 
+          RowBox[{"{", 
+           RowBox[{"Blue", ",", "centerMass"}], "}"}], "]"}], ",", 
+         RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"PlotRange", "\[Rule]", " ", 
+        RowBox[{"{", 
          RowBox[{
           RowBox[{"{", 
            RowBox[{
-            RowBox[{"20", " ", "+", " ", 
-             RowBox[{"baryCenter", "[", 
-              RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-              "]"}]}], ",", " ", "50"}], "}"}], ",", " ", 
-          RowBox[{"Distance", " ", "-", " ", 
-           RowBox[{"baryCenter", "[", 
-            RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
-            "]"}]}]}], "]"}]}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
-     RowBox[{"PlotRange", "\[Rule]", " ", 
+            RowBox[{"-", "100"}], ",", " ", "300"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "100"}], ",", " ", "300"}], "}"}]}], "}"}]}]}], 
+      "]"}]}], ",", "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Planet1", ",", " ", "10", ",", " ", "\"\<Planet 1 mass\>\""}],
+        "}"}], ",", "10", ",", " ", "100", ",", " ", 
+      RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{"Planet2", ",", " ", "10", ",", " ", "\"\<Planet 2 mass\>\""}],
+        "}"}], ",", "10", ",", " ", "100", ",", " ", 
+      RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{
       RowBox[{"{", 
        RowBox[{
+       "Distance", ",", " ", "20", ",", " ", "\"\<Distance Apart\>\""}], 
+       "}"}], ",", "20", ",", " ", "200", ",", " ", 
+      RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",",
+     "\[IndentingNewLine]", 
+    RowBox[{"{", 
+     RowBox[{"Time", ",", " ", "0", ",", " ", "1"}], "}"}], ",", 
+    "\[IndentingNewLine]", 
+    RowBox[{"Grid", "[", 
+     RowBox[{"{", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Control", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"cond1", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+            ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+         "\"\<Planet 1 Orbit\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Control", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"cond2", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+            ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+         "\"\<Planet 2 Orbit\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Control", "[", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"{", 
+             RowBox[{"cond3", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+            ",", " ", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+         "\"\<Center of Mass\>\""}], "}"}]}], "\[IndentingNewLine]", "}"}], 
+     "]"}]}], "\[IndentingNewLine]", "]"}]}]], "Input",
+ CellChangeTimes->{{3.6538616310969296`*^9, 3.6538616820973206`*^9}, {
+   3.653861759584132*^9, 3.653861859789627*^9}, 3.653861928171441*^9, {
+   3.6538620155700154`*^9, 3.6538621378546023`*^9}, {3.653862242511693*^9, 
+   3.6538623251429877`*^9}, {3.6538626385146103`*^9, 
+   3.6538628732652893`*^9}, {3.6538629083851414`*^9, 
+   3.6538629084922175`*^9}, {3.653863049326975*^9, 3.6538631504966154`*^9}, {
+   3.653863210299893*^9, 3.6538632107562666`*^9}, {3.6538632587692957`*^9, 
+   3.653863282258627*^9}, {3.653863347455385*^9, 3.6538633529812984`*^9}, {
+   3.653863437812729*^9, 3.653863461331366*^9}, {3.653863514052711*^9, 
+   3.6538635231281214`*^9}, {3.6538636169845333`*^9, 3.653863665300145*^9}, {
+   3.653863708378331*^9, 3.653863786424142*^9}, {3.6538638331939945`*^9, 
+   3.6538638411436234`*^9}, {3.6538639421615877`*^9, 3.653863963132475*^9}, {
+   3.6538640059294415`*^9, 3.6538640172880735`*^9}, {3.653864143158347*^9, 
+   3.65386431377139*^9}, {3.653864348801195*^9, 3.653864378643327*^9}, {
+   3.6538644319111967`*^9, 3.6538645497325487`*^9}, {3.653864582767941*^9, 
+   3.6538646076615686`*^9}, {3.653864650300414*^9, 3.6538646690126677`*^9}, {
+   3.653864775681058*^9, 3.6538647807576523`*^9}, {3.6538648172257843`*^9, 
+   3.653864838812069*^9}, {3.6538648720734334`*^9, 3.6538650353959866`*^9}, {
+   3.653865075605853*^9, 3.6538653348598843`*^9}, {3.65386657113635*^9, 
+   3.653866646688452*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`cond1$$ = 1, $CellContext`cond2$$ = 
+    1, $CellContext`cond3$$ = 1, $CellContext`Distance$$ = 
+    116.2, $CellContext`Planet1$$ = 10, $CellContext`Planet2$$ = 
+    26.2, $CellContext`Time$$ = 0.760235183715821, Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`Planet1$$], 10, "Planet 1 mass"}, 10, 100}, {{
+       Hold[$CellContext`Planet2$$], 10, "Planet 2 mass"}, 10, 100}, {{
+       Hold[$CellContext`Distance$$], 20, "Distance Apart"}, 20, 200}, {
+      Hold[$CellContext`Time$$], 0, 1}, {{
+       Hold[$CellContext`cond1$$], 1, ""}, {0, 1}}, {{
+       Hold[$CellContext`cond2$$], 1, ""}, {0, 1}}, {{
+       Hold[$CellContext`cond3$$], 1, ""}, {0, 1}}, {
+      Hold[
+       Grid[{{
+          Manipulate`Place[1], "Planet 1 Orbit"}, {
+          Manipulate`Place[2], "Planet 2 Orbit"}, {
+          Manipulate`Place[3], "Center of Mass"}}]], 
+      Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
+    360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`Planet1$31803$$ = 
+    0, $CellContext`Planet2$31804$$ = 0, $CellContext`Distance$31805$$ = 
+    0, $CellContext`Time$31806$$ = 0, $CellContext`cond1$31807$$ = 
+    False, $CellContext`cond2$31808$$ = False, $CellContext`cond3$31809$$ = 
+    False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`cond1$$ = 1, $CellContext`cond2$$ = 
+        1, $CellContext`cond3$$ = 1, $CellContext`Distance$$ = 
+        20, $CellContext`Planet1$$ = 10, $CellContext`Planet2$$ = 
+        10, $CellContext`Time$$ = 0}, "ControllerVariables" :> {
+        Hold[$CellContext`Planet1$$, $CellContext`Planet1$31803$$, 0], 
+        Hold[$CellContext`Planet2$$, $CellContext`Planet2$31804$$, 0], 
+        Hold[$CellContext`Distance$$, $CellContext`Distance$31805$$, 0], 
+        Hold[$CellContext`Time$$, $CellContext`Time$31806$$, 0], 
+        Hold[$CellContext`cond1$$, $CellContext`cond1$31807$$, False], 
+        Hold[$CellContext`cond2$$, $CellContext`cond2$31808$$, False], 
+        Hold[$CellContext`cond3$$, $CellContext`cond3$31809$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, 
+      "Body" :> ($CellContext`aCenterX = 
+        20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$] + 
+         Cos[(0.5 + $CellContext`Time$$) 2 
+            Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]; $CellContext`aCenterY = 
+        50 + Sin[(0.5 + $CellContext`Time$$) 2 
+            Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]; $CellContext`bCenterX = 
+        20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$] + 
+         Cos[$CellContext`Time$$ 2 
+            Pi] ($CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$]); $CellContext`bCenterY = 
+        50 + Sin[$CellContext`Time$$ 2 
+            Pi] ($CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$]); $CellContext`xCenter = 
+        20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]; $CellContext`a = 
+        Circle[{$CellContext`xCenter, 50}, 
+          $CellContext`baryCenter[$CellContext`Planet1$$, \
+$CellContext`Planet2$$, $CellContext`Distance$$]]; $CellContext`b = 
+        Circle[{$CellContext`xCenter, 
+           50}, $CellContext`Distance$$ - \
+$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
+$CellContext`Distance$$]]; $CellContext`line = 
+        Line[{{$CellContext`aCenterX, $CellContext`aCenterY}, \
+{$CellContext`bCenterX, $CellContext`bCenterY}}]; $CellContext`centerMass = 
+        Disk[{$CellContext`xCenter, 50}, 3]; $CellContext`Body1 = 
+        Disk[{$CellContext`aCenterX, $CellContext`aCenterY}, 
+          10]; $CellContext`Body2 = 
+        Disk[{$CellContext`bCenterX, $CellContext`bCenterY}, 10]; Show[
+         Graphics[{Blue, $CellContext`Body1, Green, $CellContext`Body2}], 
+         If[$CellContext`cond1$$ == 1, 
+          Graphics[{Blue, $CellContext`a}], 
+          Graphics[]], 
+         If[$CellContext`cond2$$ == 1, 
+          Graphics[{Green, $CellContext`b}], 
+          Graphics[]], 
+         If[$CellContext`cond3$$ == 1, 
+          Graphics[{Black, $CellContext`line}], 
+          Graphics[]], 
+         If[$CellContext`cond3$$ == 1, 
+          Graphics[{Blue, $CellContext`centerMass}], 
+          Graphics[]], PlotRange -> {{-100, 300}, {-100, 300}}]), 
+      "Specifications" :> {{{$CellContext`Planet1$$, 10, "Planet 1 mass"}, 10,
+          100, Appearance -> 
+         "Labeled"}, {{$CellContext`Planet2$$, 10, "Planet 2 mass"}, 10, 100, 
+         Appearance -> 
+         "Labeled"}, {{$CellContext`Distance$$, 20, "Distance Apart"}, 20, 
+         200, Appearance -> "Labeled"}, {$CellContext`Time$$, 0, 
+         1}, {{$CellContext`cond1$$, 1, ""}, {0, 1}, ControlPlacement -> 
+         1}, {{$CellContext`cond2$$, 1, ""}, {0, 1}, ControlPlacement -> 
+         2}, {{$CellContext`cond3$$, 1, ""}, {0, 1}, ControlPlacement -> 3}, 
+        Grid[{{
+           Manipulate`Place[1], "Planet 1 Orbit"}, {
+           Manipulate`Place[2], "Planet 2 Orbit"}, {
+           Manipulate`Place[3], "Center of Mass"}}]}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {302., 309.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.653864314766096*^9, 3.6538645506782193`*^9, 3.653864608306*^9, 
+   3.653864688974659*^9, {3.653864796483788*^9, 3.6538648406113415`*^9}, {
+   3.6538652068252525`*^9, 3.653865272458375*^9}, {3.6538653180676975`*^9, 
+   3.6538653355036616`*^9}, 3.6538665723942575`*^9, {3.6538666097439094`*^9, 
+   3.6538666318069134`*^9}, 3.6538667250759497`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"x", " ", "center", " ", "for", " ", "body", " ", "1"}], "*)"}], 
+  RowBox[{
+   RowBox[{
+    RowBox[{"aCenterX", " ", "=", " ", 
+     RowBox[{"20", " ", "+", " ", 
+      RowBox[{"baryCenter", "[", 
+       RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], "]"}], 
+      "+", " ", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"0.5", " ", "+", " ", "Time"}], " ", ")"}], "*", " ", "2", 
+         "Pi"}], "]"}], " ", "*", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+        "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"y", " ", "center", " ", "for", " ", "body", " ", "1"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"aCenterY", " ", "=", " ", 
+     RowBox[{"50", " ", "+", " ", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"0.5", " ", "+", " ", "Time"}], ")"}], "*", "2", "Pi"}], 
+        "]"}], "*", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+        "]"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"x", " ", "center", " ", "for", " ", "body", " ", "2"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"bCenterX", "=", 
+     RowBox[{"20", " ", "+", " ", 
+      RowBox[{"baryCenter", "[", 
+       RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], "]"}], 
+      "+", " ", 
+      RowBox[{
+       RowBox[{"Cos", "[", 
+        RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], " ", "*", " ", 
+       RowBox[{"(", 
+        RowBox[{"Distance", " ", "-", " ", 
+         RowBox[{"baryCenter", "[", 
+          RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+          "]"}]}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"y", " ", "center", " ", "for", " ", "body", " ", "2"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"bCenterY", "=", 
+     RowBox[{"50", " ", "+", " ", 
+      RowBox[{
+       RowBox[{"Sin", "[", 
+        RowBox[{"Time", " ", "*", " ", "2", "Pi"}], "]"}], "*", 
+       RowBox[{"(", 
+        RowBox[{"Distance", " ", "-", " ", 
+         RowBox[{"baryCenter", "[", 
+          RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+          "]"}]}], ")"}]}]}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"orbit", " ", "1", " ", "center", " ", "x"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"xCenter", " ", "=", " ", 
+     RowBox[{"20", " ", "+", " ", 
+      RowBox[{"baryCenter", "[", 
+       RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+       "]"}]}]}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"orbit", " ", "1"}], "*)"}], " ", 
+    RowBox[{"a", " ", "=", " ", 
+     RowBox[{"Circle", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", 
+       RowBox[{"baryCenter", "[", 
+        RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+        "]"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"orbit", " ", "2"}], "*)"}], " ", 
+    RowBox[{"b", " ", "=", " ", 
+     RowBox[{"Circle", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", 
+       RowBox[{"Distance", " ", "-", " ", 
+        RowBox[{"baryCenter", "[", 
+         RowBox[{"Planet1", ",", " ", "Planet2", ",", " ", "Distance"}], 
+         "]"}]}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"line", " ", "between", " ", "two", " ", "centers"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"line", " ", "=", 
+     RowBox[{"Line", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
         RowBox[{"{", 
-         RowBox[{
-          RowBox[{"-", "100"}], ",", " ", "300"}], "}"}], ",", " ", 
+         RowBox[{"aCenterX", ",", " ", "aCenterY"}], "}"}], ",", 
+        "\[IndentingNewLine]", 
         RowBox[{"{", 
-         RowBox[{
-          RowBox[{"-", "100"}], ",", " ", "300"}], "}"}]}], "}"}]}]}], "]"}], 
-   ",", "\[IndentingNewLine]", 
+         RowBox[{"bCenterX", ",", " ", "bCenterY"}], "}"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"center", " ", "of", " ", "mass"}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{"centerMass", "=", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"xCenter", ",", " ", "50"}], "}"}], ",", " ", "3"}], "]"}]}], 
+    ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"body", " ", "1"}], "*)"}], " ", 
+    RowBox[{"Body1", "=", " ", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"aCenterX", ",", " ", "aCenterY"}], "}"}], ",", " ", "10"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{"body", " ", "2"}], "*)"}], " ", 
+    RowBox[{"Body2", " ", "=", " ", 
+     RowBox[{"Disk", "[", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"bCenterX", ",", " ", "bCenterY"}], "}"}], ",", " ", "10"}], 
+      "]"}]}], ";", "\[IndentingNewLine]", 
+    RowBox[{"Show", "[", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", "\[IndentingNewLine]", 
+        RowBox[{"(*", 
+         RowBox[{"body", " ", "1"}], "*)"}], " ", 
+        RowBox[{"Blue", ",", " ", "Body1", ",", "\[IndentingNewLine]", 
+         RowBox[{"(*", 
+          RowBox[{"body", " ", "2"}], "*)"}], " ", "Green", ",", " ", 
+         "Body2"}], "\[IndentingNewLine]", "}"}], "]"}], ",", 
+      "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"cond1", "\[Equal]", "1"}], ",", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "a"}], "}"}], "]"}], ",", 
+        RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"cond2", "\[Equal]", "1"}], ",", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{"Green", ",", "b"}], "}"}], "]"}], ",", 
+        RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"cond3", "\[Equal]", "1"}], ",", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{"Black", ",", "line"}], "}"}], "]"}], ",", 
+        RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"cond3", "\[Equal]", "1"}], ",", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", 
+          RowBox[{"Blue", ",", "centerMass"}], "}"}], "]"}], ",", 
+        RowBox[{"Graphics", "[", "]"}]}], "]"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"PlotRange", "\[Rule]", " ", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "100"}], ",", " ", "300"}], "}"}], ",", " ", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"-", "100"}], ",", " ", "300"}], "}"}]}], "}"}]}]}], 
+     "]"}]}], ",", "\[IndentingNewLine]", 
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
@@ -155,95 +606,667 @@ Cell[BoxData[{
    RowBox[{"{", 
     RowBox[{
      RowBox[{"{", 
-      RowBox[{"Distance", ",", " ", "1", ",", " ", "\"\<Distance Apart\>\""}],
-       "}"}], ",", "1", ",", " ", "200", ",", " ", 
+      RowBox[{
+      "Distance", ",", " ", "20", ",", " ", "\"\<Distance Apart\>\""}], "}"}],
+      ",", "20", ",", " ", "200", ",", " ", 
      RowBox[{"Appearance", "\[Rule]", " ", "\"\<Labeled\>\""}]}], "}"}], ",", 
    "\[IndentingNewLine]", 
    RowBox[{"{", 
-    RowBox[{"Time", ",", " ", "0", ",", " ", "1"}], "}"}]}], 
-  "\[IndentingNewLine]", "]"}]}], "Input",
- CellChangeTimes->CompressedData["
-1:eJwdxU0ogwEABuBva7LYyJZtGbWtbLU5WGlGa7WlOOzALhQZq0UpQ41QpGaH
-2WlJciS21bSF2g8ZUSI10vy1tElia8VSmvnb+x2eHqHRrDdRCYKoKcC6o/RI
-rjGtcVkTk/ihuWUGVw1553B3x8I8pss/nVgqsmzgvmiZB/MYnE18aVvZxqKJ
-rQAeCB7s4u8bfwQP+9Rn+D7GjeIx9t4zns62vWPOUj85yychvgp7+X4afqlN
-lmB3b2kF3pHecXHK2s7D6quMGCtfs+TuBE+O4wJFAz73bFrwSXJ9HD/FFVb8
-Fm8iTzFoqzii9ezjBpX9Gq9RHa+YdnyawYOj3TkcMh7+4HKu4RfrY8uMfOFw
-LEAeVBJcTA9xyOtFH1XYLCri44s/rwC7hHYxng2zOvFwntOFbTpJD6aYsgb8
-yI5RmMq0xilrK8aVYVkdnmq9VeFFlkeDHdVMLf4HErfynQ==
-  "]],
+    RowBox[{"Time", ",", " ", "0", ",", " ", "1"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Grid", "[", 
+    RowBox[{"{", "\[IndentingNewLine]", 
+     RowBox[{
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"cond1", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+           ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+        "\"\<Planet 1 Orbit\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"cond2", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+           ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+        "\"\<Planet 2 Orbit\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Control", "[", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"cond3", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+           ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", " ", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+        "\"\<Center of Mass\>\""}], "}"}]}], "\[IndentingNewLine]", "}"}], 
+    "]"}]}], "\[IndentingNewLine]", "]"}]], "Input"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"G", "=", "1"}], ";", 
+  RowBox[{"time", "=", "30"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"mA", "=", "1"}], ";", 
+  RowBox[{"xA0", "=", "0"}], ";", 
+  RowBox[{"yA0", "=", "0"}], ";", 
+  RowBox[{"vxA0", "=", "0"}], ";", 
+  RowBox[{"vyA0", "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"mB", "=", "1"}], ";", 
+  RowBox[{"xB0", "=", "1"}], ";", 
+  RowBox[{"yB0", "=", "0"}], ";", 
+  RowBox[{"vxB0", "=", "0"}], ";", 
+  RowBox[{"vyB0", "=", "0"}], ";"}], "\n", 
+ RowBox[{
+  RowBox[{"mC", "=", "1"}], ";", 
+  RowBox[{"xC0", "=", "0"}], ";", 
+  RowBox[{"yC0", "=", "0.8"}], ";", 
+  RowBox[{"vxC0", "=", "0"}], ";", 
+  RowBox[{"vyC0", "=", "0"}], ";"}], "\n", 
+ RowBox[{"soln1", "=", 
+  RowBox[{"NDSolve", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"mA", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "xA", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mA", "*", "mB", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xA", "[", "t", "]"}], "-", 
+               RowBox[{"xB", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xA", "[", "t", "]"}], "-", 
+                 RowBox[{"xB", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yA", "[", "t", "]"}], "-", 
+                 RowBox[{"yB", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mA", "*", "mC", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"xA", "[", "t", "]"}], "-", 
+             RowBox[{"xC", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xA", "[", "t", "]"}], "-", 
+               RowBox[{"xC", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yA", "[", "t", "]"}], "-", 
+               RowBox[{"yC", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"mA", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "yA", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mA", "*", "mB", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yA", "[", "t", "]"}], "-", 
+               RowBox[{"yB", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xA", "[", "t", "]"}], "-", 
+                 RowBox[{"xB", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yA", "[", "t", "]"}], "-", 
+                 RowBox[{"yB", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mA", "*", "mC", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"yA", "[", "t", "]"}], "-", 
+             RowBox[{"yC", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xA", "[", "t", "]"}], "-", 
+               RowBox[{"xC", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yA", "[", "t", "]"}], "-", 
+               RowBox[{"yC", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"mB", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "xB", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mB", "*", "mC", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xB", "[", "t", "]"}], "-", 
+               RowBox[{"xC", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xB", "[", "t", "]"}], "-", 
+                 RowBox[{"xC", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yB", "[", "t", "]"}], "-", 
+                 RowBox[{"yC", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mB", "*", "mA", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"xB", "[", "t", "]"}], "-", 
+             RowBox[{"xA", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xB", "[", "t", "]"}], "-", 
+               RowBox[{"xA", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yB", "[", "t", "]"}], "-", 
+               RowBox[{"yA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"mB", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "yB", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mB", "*", "mC", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yB", "[", "t", "]"}], "-", 
+               RowBox[{"yC", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xB", "[", "t", "]"}], "-", 
+                 RowBox[{"xC", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yB", "[", "t", "]"}], "-", 
+                 RowBox[{"yC", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mB", "*", "mA", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"yB", "[", "t", "]"}], "-", 
+             RowBox[{"yA", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xB", "[", "t", "]"}], "-", 
+               RowBox[{"xA", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yB", "[", "t", "]"}], "-", 
+               RowBox[{"yA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"mC", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "xC", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mC", "*", "mA", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xC", "[", "t", "]"}], "-", 
+               RowBox[{"xA", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xC", "[", "t", "]"}], "-", 
+                 RowBox[{"xA", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yC", "[", "t", "]"}], "-", 
+                 RowBox[{"yA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mC", "*", "mB", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"xC", "[", "t", "]"}], "-", 
+             RowBox[{"xB", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xC", "[", "t", "]"}], "-", 
+               RowBox[{"xB", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yC", "[", "t", "]"}], "-", 
+               RowBox[{"yB", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"mC", "*", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"Derivative", "[", "2", "]"}], "[", "yC", "]"}], "[", "t", 
+         "]"}]}], "\[Equal]", 
+       RowBox[{
+        RowBox[{"-", 
+         RowBox[{"(", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{"G", "*", "mC", "*", "mA", "*", 
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yC", "[", "t", "]"}], "-", 
+               RowBox[{"yA", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+           RowBox[{
+            RowBox[{"(", 
+             RowBox[{
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"xC", "[", "t", "]"}], "-", 
+                 RowBox[{"xA", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+              RowBox[{
+               RowBox[{"(", 
+                RowBox[{
+                 RowBox[{"yC", "[", "t", "]"}], "-", 
+                 RowBox[{"yA", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+            "^", 
+            RowBox[{"(", 
+             RowBox[{"3", "/", "2"}], ")"}]}]}], ")"}]}], "-", 
+        RowBox[{
+         RowBox[{"(", 
+          RowBox[{"G", "*", "mC", "*", "mB", "*", 
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"yC", "[", "t", "]"}], "-", 
+             RowBox[{"yB", "[", "t", "]"}]}], ")"}]}], ")"}], "/", 
+         RowBox[{
+          RowBox[{"(", 
+           RowBox[{
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"xC", "[", "t", "]"}], "-", 
+               RowBox[{"xB", "[", "t", "]"}]}], ")"}], "^", "2"}], "+", 
+            RowBox[{
+             RowBox[{"(", 
+              RowBox[{
+               RowBox[{"yC", "[", "t", "]"}], "-", 
+               RowBox[{"yB", "[", "t", "]"}]}], ")"}], "^", "2"}]}], ")"}], 
+          "^", 
+          RowBox[{"(", 
+           RowBox[{"3", "/", "2"}], ")"}]}]}]}]}], ",", 
+      RowBox[{
+       RowBox[{"xA", "[", "0", "]"}], "\[Equal]", "xA0"}], ",", 
+      RowBox[{
+       RowBox[{"yA", "[", "0", "]"}], "\[Equal]", "yA0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "xA", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vxA0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "yA", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vyA0"}], ",", 
+      RowBox[{
+       RowBox[{"xB", "[", "0", "]"}], "\[Equal]", "xB0"}], ",", 
+      RowBox[{
+       RowBox[{"yB", "[", "0", "]"}], "\[Equal]", "yB0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "xB", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vxB0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "yB", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vyB0"}], ",", 
+      RowBox[{
+       RowBox[{"xC", "[", "0", "]"}], "\[Equal]", "xC0"}], ",", 
+      RowBox[{
+       RowBox[{"yC", "[", "0", "]"}], "\[Equal]", "yC0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "xC", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vxC0"}], ",", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         RowBox[{"Derivative", "[", "1", "]"}], "[", "yC", "]"}], "[", "0", 
+        "]"}], "\[Equal]", "vyC0"}]}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"xA", ",", "yA", ",", "xB", ",", "yB", ",", "xC", ",", "yC"}], 
+     "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"t", ",", "0", ",", "time"}], "}"}], ",", 
+    RowBox[{"MaxSteps", "\[Rule]", "100000"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"x1", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"xA", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "1"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"y1", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"yA", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "2"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"x2", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"xB", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "3"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"y2", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"yB", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "4"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"x3", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"xC", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "5"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{
+  RowBox[{"y3", "[", "t_", "]"}], ":=", 
+  RowBox[{"Evaluate", "[", 
+   RowBox[{
+    RowBox[{"yC", "[", "t", "]"}], "/.", 
+    RowBox[{"soln1", "[", 
+     RowBox[{"[", 
+      RowBox[{"1", ",", "6"}], "]"}], "]"}]}], "]"}]}], "\n", 
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"Show", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"ParametricPlot", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"x1", "[", "t", "]"}], ",", 
+            RowBox[{"y1", "[", "t", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"x2", "[", "t", "]"}], ",", 
+            RowBox[{"y2", "[", "t", "]"}]}], "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"x3", "[", "t", "]"}], ",", 
+            RowBox[{"y3", "[", "t", "]"}]}], "}"}]}], "}"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"t", ",", 
+          RowBox[{"tmax", "-", "0.5"}], ",", "tmax"}], "}"}], ",", 
+        RowBox[{"Axes", "\[Rule]", "False"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.55"}], ",", "1.45"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "0.55"}], ",", "1.08"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"PlotStyle", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{"Red", ",", "Green", ",", "Blue"}], "}"}]}], ",", 
+        RowBox[{"GridLines", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"0.25", "*", "x"}], "+", "0.07"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"x", ",", 
+               RowBox[{"-", "100"}], ",", "100"}], "}"}]}], "]"}], ",", 
+           RowBox[{"Table", "[", 
+            RowBox[{
+             RowBox[{
+              RowBox[{"0.25", "*", "y"}], "+", "0.01"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"y", ",", 
+               RowBox[{"-", "100"}], ",", "100"}], "}"}]}], "]"}]}], "}"}]}], 
+        ",", 
+        RowBox[{"GridLinesStyle", "\[Rule]", 
+         RowBox[{"Directive", "[", "LightGray", "]"}]}]}], "]"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"Graphics", "[", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"Opacity", "[", "0.7", "]"}], ",", 
+         RowBox[{"EdgeForm", "[", 
+          RowBox[{"Directive", "[", "Black", "]"}], "]"}], ",", "Red", ",", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x1", "[", "tmax", "]"}], ",", 
+             RowBox[{"y1", "[", "tmax", "]"}]}], "}"}], ",", "0.03"}], "]"}], 
+         ",", "Green", ",", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x2", "[", "tmax", "]"}], ",", 
+             RowBox[{"y2", "[", "tmax", "]"}]}], "}"}], ",", "0.03"}], "]"}], 
+         ",", "Blue", ",", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x3", "[", "tmax", "]"}], ",", 
+             RowBox[{"y3", "[", "tmax", "]"}]}], "}"}], ",", "0.03"}], 
+          "]"}]}], "}"}], "]"}], "}"}], ",", 
+     RowBox[{"ImageSize", "\[Rule]", "600"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"tmax", ",", "6.05", ",", "16.05"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"mA", ",", " ", "1", ",", " ", "10"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"mB", ",", " ", "1", ",", " ", "10"}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{"mC", ",", " ", "1", ",", " ", "10"}], "}"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.6538670324560165`*^9, 3.6538670324570174`*^9}, {
+  3.653867147622532*^9, 3.6538671833311443`*^9}}],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`Distance$$ = 160., $CellContext`Planet1$$ = 
-    35.7, $CellContext`Planet2$$ = 15.2, $CellContext`Time$$ = 0., 
-    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+   DynamicModuleBox[{$CellContext`mA$$ = 3.14, $CellContext`mB$$ = 
+    4.57, $CellContext`mC$$ = 6.47, $CellContext`tmax$$ = 12.186415481567384`,
+     Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
     Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
-    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`Planet1$$], 10, "Planet 1 mass"}, 10, 100}, {{
-       Hold[$CellContext`Planet2$$], 10, "Planet 2 mass"}, 10, 100}, {{
-       Hold[$CellContext`Distance$$], 1, "Distance Apart"}, 1, 200}, {
-      Hold[$CellContext`Time$$], 0, 1}}, Typeset`size$$ = {
-    360., {178., 182.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True, $CellContext`Planet1$3792$$ = 
-    0, $CellContext`Planet2$3793$$ = 0, $CellContext`Distance$3794$$ = 
-    0, $CellContext`Time$3795$$ = 0}, 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`tmax$$], 6.05, 16.05}, {
+      Hold[$CellContext`mA$$], 1, 10}, {
+      Hold[$CellContext`mB$$], 1, 10}, {
+      Hold[$CellContext`mC$$], 1, 10}}, Typeset`size$$ = {600., {243., 246.}},
+     Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`tmax$37749$$ = 0, $CellContext`mA$37750$$ = 
+    0, $CellContext`mB$37751$$ = 0, $CellContext`mC$37752$$ = 0}, 
     DynamicBox[Manipulate`ManipulateBoxes[
      1, StandardForm, 
-      "Variables" :> {$CellContext`Distance$$ = 1, $CellContext`Planet1$$ = 
-        10, $CellContext`Planet2$$ = 10, $CellContext`Time$$ = 0}, 
+      "Variables" :> {$CellContext`mA$$ = 1, $CellContext`mB$$ = 
+        1, $CellContext`mC$$ = 1, $CellContext`tmax$$ = 6.05}, 
       "ControllerVariables" :> {
-        Hold[$CellContext`Planet1$$, $CellContext`Planet1$3792$$, 0], 
-        Hold[$CellContext`Planet2$$, $CellContext`Planet2$3793$$, 0], 
-        Hold[$CellContext`Distance$$, $CellContext`Distance$3794$$, 0], 
-        Hold[$CellContext`Time$$, $CellContext`Time$3795$$, 0]}, 
+        Hold[$CellContext`tmax$$, $CellContext`tmax$37749$$, 0], 
+        Hold[$CellContext`mA$$, $CellContext`mA$37750$$, 0], 
+        Hold[$CellContext`mB$$, $CellContext`mB$37751$$, 0], 
+        Hold[$CellContext`mC$$, $CellContext`mC$37752$$, 0]}, 
       "OtherVariables" :> {
        Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
         Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
         Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
-         Typeset`skipInitDone$$}, "Body" :> Show[
-        Graphics[{Blue, 
-          
-          Disk[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$] + 
-            Cos[(0.5 + $CellContext`Time$$) 2 
-               Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$], 50 + 
-            Sin[(0.5 + $CellContext`Time$$) 2 
-               Pi] $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$]}, $CellContext`Planet1$$], 
-          Green, 
-          
-          Disk[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$] + 
-            Cos[$CellContext`Time$$ 2 
-               Pi] ($CellContext`Distance$$ - \
-$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
-$CellContext`Distance$$]), 50 + 
-            Sin[$CellContext`Time$$ 2 
-               Pi] ($CellContext`Distance$$ - \
-$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
-$CellContext`Distance$$])}, $CellContext`Planet2$$], Black, 
-          
-          Circle[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$], 50}, 
-           $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$]], Black, 
-          
-          Circle[{20 + $CellContext`baryCenter[$CellContext`Planet1$$, \
-$CellContext`Planet2$$, $CellContext`Distance$$], 
-            50}, $CellContext`Distance$$ - \
-$CellContext`baryCenter[$CellContext`Planet1$$, $CellContext`Planet2$$, \
-$CellContext`Distance$$]]}], PlotRange -> {{-100, 250}, {-100, 250}}], 
-      "Specifications" :> {{{$CellContext`Planet1$$, 10, "Planet 1 mass"}, 10,
-          100, Appearance -> 
-         "Labeled"}, {{$CellContext`Planet2$$, 10, "Planet 2 mass"}, 10, 100, 
-         Appearance -> 
-         "Labeled"}, {{$CellContext`Distance$$, 1, "Distance Apart"}, 1, 200, 
-         Appearance -> "Labeled"}, {$CellContext`Time$$, 0, 1}}, 
-      "Options" :> {}, "DefaultOptions" :> {}],
-     ImageSizeCache->{411., {264., 271.}},
+         Typeset`skipInitDone$$}, "Body" :> Show[{
+         ParametricPlot[{{
+            $CellContext`x1[$CellContext`t], 
+            $CellContext`y1[$CellContext`t]}, {
+            $CellContext`x2[$CellContext`t], 
+            $CellContext`y2[$CellContext`t]}, {
+            $CellContext`x3[$CellContext`t], 
+            $CellContext`y3[$CellContext`t]}}, {$CellContext`t, \
+$CellContext`tmax$$ - 0.5, $CellContext`tmax$$}, Axes -> False, 
+          PlotRange -> {{-0.55, 1.45}, {-0.55, 1.08}}, 
+          PlotStyle -> {Red, Green, Blue}, GridLines -> {
+            Table[0.25 $CellContext`x + 0.07, {$CellContext`x, -100, 100}], 
+            Table[0.25 $CellContext`y + 0.01, {$CellContext`y, -100, 100}]}, 
+          GridLinesStyle -> Directive[LightGray]]}, {
+         Graphics[{
+           Opacity[0.7], 
+           EdgeForm[
+            Directive[Black]], Red, 
+           Disk[{
+             $CellContext`x1[$CellContext`tmax$$], 
+             $CellContext`y1[$CellContext`tmax$$]}, 0.03], Green, 
+           Disk[{
+             $CellContext`x2[$CellContext`tmax$$], 
+             $CellContext`y2[$CellContext`tmax$$]}, 0.03], Blue, 
+           Disk[{
+             $CellContext`x3[$CellContext`tmax$$], 
+             $CellContext`y3[$CellContext`tmax$$]}, 0.03]}]}, ImageSize -> 
+        600], "Specifications" :> {{$CellContext`tmax$$, 6.05, 
+         16.05}, {$CellContext`mA$$, 1, 10}, {$CellContext`mB$$, 1, 
+         10}, {$CellContext`mC$$, 1, 10}}, "Options" :> {}, 
+      "DefaultOptions" :> {}],
+     ImageSizeCache->{651., {341., 348.}},
      SingleEvaluation->True],
     Deinitialization:>None,
     DynamicModuleValues:>{},
@@ -254,21 +1277,8 @@ $CellContext`Distance$$]]}], PlotRange -> {{-100, 250}, {-100, 250}}],
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.653226261999012*^9, 3.653226297067767*^9, 3.653226379771413*^9, 
-   3.653226466259371*^9, {3.6532265023614926`*^9, 3.653226534312411*^9}, {
-   3.6532266094934206`*^9, 3.6532266330744505`*^9}, 3.653226691188509*^9, 
-   3.6532268081336*^9, {3.653226896118402*^9, 3.653226914579216*^9}, {
-   3.653227439274972*^9, 3.653227446061975*^9}, 3.6532275545930634`*^9, 
-   3.653227798170121*^9, {3.6532279585665517`*^9, 3.6532279926347*^9}, 
-   3.6532280235406837`*^9, {3.6532282476783*^9, 3.653228307343157*^9}, {
-   3.653228347068945*^9, 3.6532283665473056`*^9}, {3.653228404540657*^9, 
-   3.6532284092642865`*^9}, {3.6532284405304155`*^9, 3.65322849155586*^9}, 
-   3.6532285313309517`*^9, 3.6532286466357174`*^9, 3.65322872952264*^9, 
-   3.6532287606604815`*^9, {3.6532288064687934`*^9, 3.653228853097894*^9}, 
-   3.6532292491557236`*^9, {3.6532292831656933`*^9, 3.6532293120123615`*^9}, 
-   3.6532653670245924`*^9, 3.653265467703374*^9, 3.6532658230205507`*^9, 
-   3.653265897326641*^9}]
+ CellChangeTimes->{{3.6538670372069893`*^9, 3.6538670384626074`*^9}, 
+   3.653867185251483*^9}]
 }, Open  ]]
 },
 WindowSize->{958, 988},
@@ -288,8 +1298,13 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 6267, 151, 452, "Input"],
-Cell[6850, 175, 5233, 95, 552, "Output"]
+Cell[580, 22, 11078, 261, 912, "Input"],
+Cell[11661, 285, 6754, 124, 661, "Output"]
+}, Open  ]],
+Cell[18430, 412, 9386, 240, 892, "Input"],
+Cell[CellGroupData[{
+Cell[27841, 656, 19167, 551, 792, "Input"],
+Cell[47011, 1209, 3560, 71, 706, "Output"]
 }, Open  ]]
 }
 ]
