@@ -69,7 +69,7 @@
                         <span>Earth, Moon and Sun ></span>
                         </a>
                         <ul id="EarthMoonSun" class="collapse in">
-                            <li class="active">
+                            <li>
                                 <a href="moonPhase.html">Moon Phase</a>
                             </li>
                             <li>
@@ -84,11 +84,11 @@
                         <a href="javascript:;" data-toggle="collapse" data-target="#Planets">
                         <span>Planets ></span>
                         </a>
-                        <ul id="Planets" class="collapse">
+                        <ul id="Planets">
                             <li>
                                 <a href="#">Planet Movement</a>
                             </li>
-                            <li>
+                            <li class = "active">
                                 <a href="nbody.html">n-body Problem</a>
                             </li>
                         </ul>
@@ -162,10 +162,56 @@
             <div>
 
             </div>
+            <p> <strong>Ready with a little quiz?</strong> </p>
+<p class="question"><font color = "white">1. When does the n-body problem always have an analytic solution?</p>        
+
+<ul class="answers">            
+<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">&nbsp;A, 2-body</label><br/>           
+<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">&nbsp;B, 3-body</label><br/>            
+<input type="radio" name="q1" value="c" id="q1c"><label for="q1c">&nbsp;C, 2 and 3 body</label><br/>
+<input type="radio" name="q1" value="d" id="q1d"><label for="q1d">&nbsp;D, Never</label><br/>
+</ul>
+
+<div id="category1">
+<p>              
+<strong><font color = "red">Question 1:</strong> The correct answer is <strong>&nbsp;A, 2-body</strong>.</p>        
         </div>
+<p class="question"><font color = "white">2. What can cause the widely diverging outcomes seen in chaos theory?</p>        
+
+<ul class="answers">            
+<input type="radio" name="q2" value="a" id="q2a"><label for="q2a">&nbsp;A, Rounding errors</label><br/>           
+<input type="radio" name="q2" value="b" id="q2b"><label for="q2b">&nbsp;B, Randomness</label><br/>            
+<input type="radio" name="q2" value="c" id="q2c"><label for="q2c">&nbsp;C, Nondeterministic system</label><br/>              
+</ul>        
+
+<div id="category2">            
+<p>              
+<strong><font color = "red">Question 2:</strong> The correct answer is <strong>&nbsp;A, Rounding errors</strong>.</p>        
+</div>
+<p class="question"><font color = "white">3. What is an example for Chaos Theory?</p>        
+
+<ul class="answers">            
+<input type="radio" name="q3" value="a" id="q3a"><label for="q3a">&nbsp;A, Cascade effect</label><br/>           
+<input type="radio" name="q3" value="b" id="q3b"><label for="q3b">&nbsp;B, Butterfly effect</label><br/>            
+<input type="radio" name="q3" value="c" id="q3c"><label for="q3c">&nbsp;C, Matthew effect</label><br/>              
+</ul>        
+
+<div id="category3">            
+<p>              
+<strong><font color = "red">Question 3:</strong> The correct answer is <strong>&nbsp;B, Butterfly effect</strong>.</p>        
+</div>
+<div id="results">
+<font color = "red">Show me the answers!
+</div>
+<div id="category11">
+<p>                
+You answered them all right!</p>        
+</div>
     </div>
     <!-- /#wrapper -->
     <script src="../js/jquery/jquery.min.js"></script>
     <script src="../js/bootstrap/bootstrap.min.js"></script>
+   <script type="text/javascript" src="../js/questions/jquery.js"></script>
+       <script type="text/javascript" src="../js/questions/questionsforN.js"></script>
   </body>
 </html>
