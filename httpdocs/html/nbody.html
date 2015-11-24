@@ -124,7 +124,7 @@
                 <hr/>
                 <br/>
                 <p><b>Is The Solar System Stable?</b></p>
-                <p>Imagine this: The planets in our solar system torn from their orbits, flung and scattered into the bottomless depths of space. The circular path the Earth once tread gone, replaced with a chaotic meandering that nearly collides the Sun one moment and skims the edge of the solar system next. Finally, only the Sun remains, a lone yellow star stripped of its planets.</p>
+                <p>Imagine this: The planets in our solar system torn from their orbits, flung and scattered into the bottomless depths of space. The circular path the Earth once tread gone, replaced with a chaotic meandering that nearly collides with the Sun one moment and skims the edge of the solar system next. Finally, only the Sun remains, a lone yellow star stripped of its planets.</p>
 
                 <p>Is this the plot of a cheesy 1960s sci-fi flick? Surprisingly, no.</p>
 
@@ -137,10 +137,10 @@
                 
                 <p>Unfortunately, when n is greater than 2 (meaning the system involves more than two bodies), no easy solution exists. In 1887, Henri Poincare proved no general solution exists. The proof is beyond the scope of this text, but orbits in 3 or more body problems tend to be non-repeating. There are special circumstances in which the 3-body body problem is solvable, such as 3 planets with equal mass orbiting at the same speed around a common center spaced equally apart, but those are rare. An analytic solution (a formula where you can plug and chug) in the form of a convergent series does exist, but the series converges so slowly the heat death of the universe would occur before an answer is found.</p>
 
-                <p><b>Simulating n-body Problem</b></p>
+                <p><b>Simulating the n-body Problem</b></p>
                 <p>Because we cannot compute an exact answer to the n-body problem, we resort to simulation.</p>
                 
-                <p>One potential solution is simplifying down the problem to a 2-body problem. This works well with the sun, earth, and moon since we can “combine” the earth and moon into a single body, but simplification of this sort does not work well with the solar system.</p>
+                <p>One potential solution is simplifying down the problem to a 2-body problem. This works well with the sun, earth, and a satellite orbiting the earth since we can “combine” the earth and the satellite into a single body, but simplification of this sort does not work well with the solar system.</p>
 
                 <p>The app uses a modified version of what is called Euler’s method for the simulation. (Astronomers would use more sophisticated techniques besides Euler’s method.) Here is how the app works.</p>
                 <ol>
@@ -151,14 +151,14 @@
                 <p>For the app, the span of time we use in step 2 is relatively long to reduce the number of calculations we need to perform. However, if we make the time in step 2 very short, wouldn’t we get close to a perfect simulation?</p>
 
                 <p><b>Chaos Theory</b></p>
-                <p>The answer is no. We face another major obstacle: chaos theory. Chaos theory is concerned with how small changes in initial conditions can create large changes over time in a system.</p>
-                <p>The pioneer of chaos theory was Edward Lorenz. While he was working on weather prediction models in the 1950s and 60s, he made a startling discovery; the predictions could change drastically if the starting conditions, such as temperature, were slightly different. Lorenz coined the term the “butterfly effect” to illustrate how the flapping of a butterfly’s wings a few weeks ago could lead to a hurricane now.</p>
-                <p>Note that even when we have perfect knowledge of starting conditions, we are still subject to chaos theory in our calculations. Numbers in computers have specified limits for the number of decimal digits, resulting in the last digit being rounded. With successive calculations, the error introduced by rounding can build up to visibly impact the outcome.</p>
+                <p>The answer is no. We face another major obstacle that can be explained by chaos theory. Chaos theory is concerned with how small changes in initial conditions can create large changes over time in a system.</p>
+                <p>The pioneer of chaos theory was Edward Lorenz. While he was working on weather prediction models in the 1950s and 60s, he made a startling discovery: the predictions could change drastically if the starting conditions, such as temperature, were slightly different. Lorenz coined the term the “butterfly effect” to illustrate how the flapping of a butterfly’s wings a few weeks ago could lead to a hurricane now.</p>
+                <p>Note that even when we have perfect knowledge of starting conditions, we are still subject to the limits of computing in our calculations. Numbers in computers have specified limits for the number of decimal digits, resulting in the last digit being rounded. With successive calculations, the error introduced by rounding can build up to visibly impact the outcome.</p>
 
                 <p><b>The Fate of the Solar System</b></p>
                 <p>With what we have learned about the n-body problem and chaos theory, how successful have solar system simulations been? Scientists have been researching the stability of the solar system for centuries, but only recently has the solar system been simulated on supercomputers. One such simulation was conducted by Jacques Laskar in 2012. According to Laskar, the accuracy of predictions falls off after simulating tens of millions of years because of the effects of chaos theory. Nevertheless, the simulation examined the solar system in 5 billion years and assigned probabilities to different outcomes. In 99% of the outcomes, no planets collided or ejected. However, in the remaining 1%, collisions and ejections among the inner planets occurred, often involving Mercury, which can be affected by Jupiter’s orbit.</p>
                 <p>So, you can rest easy that, at least for the next few million years, the solar system is safe.</p>
-                <p>See http://arxiv.org/abs/1209.5996 for more details on the simulation.</p>
+                <p>See <a href="http://arxiv.org/abs/1209.5996">http://arxiv.org/abs/1209.5996</a> for more details on the simulation.</p>
             <div>
 
             </div>
