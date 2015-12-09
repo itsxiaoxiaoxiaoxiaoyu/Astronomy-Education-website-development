@@ -1,0 +1,808 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     34344,        799]
+NotebookOptionsPosition[     33981,        782]
+NotebookOutlinePosition[     34327,        797]
+CellTagsIndexPosition[     34284,        794]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Module", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"status", "=", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"0", ",", "0", ",", "10000", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "\[IndentingNewLine]", 
+       "\t   ", ",", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"-", "500"}], ",", "0", ",", "100", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", "5"}], "}"}]}], "}"}], "\[IndentingNewLine]", 
+       "\t   ", ",", 
+       RowBox[{"{", 
+        RowBox[{"500", ",", "0", ",", "100", ",", 
+         RowBox[{"{", 
+          RowBox[{"0", ",", 
+           RowBox[{"-", "5"}]}], "}"}]}], "}"}]}], "}"}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"Manipulate", "[", "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"Show", "[", "\[IndentingNewLine]", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"If", "[", 
+         RowBox[{
+          RowBox[{"cond1", "\[Equal]", "1"}], ",", 
+          RowBox[{"status", " ", "=", " ", 
+           RowBox[{"step", "[", "status", "]"}]}]}], "]"}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"b1", "=", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x1", "[", "status", "]"}], ",", " ", 
+             RowBox[{"y1", "[", "status", "]"}]}], "}"}], ",", " ", "50"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"b2", "=", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x2", "[", "status", "]"}], ",", " ", 
+             RowBox[{"y2", "[", "status", "]"}]}], "}"}], ",", " ", "50"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"b3", "=", 
+         RowBox[{"Disk", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"x3", "[", "status", "]"}], ",", " ", 
+             RowBox[{"y3", "[", "status", "]"}]}], "}"}], ",", " ", "50"}], 
+          "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{"Graphics", "[", 
+         RowBox[{"{", "\[IndentingNewLine]", 
+          RowBox[{
+          "Blue", ",", "b1", ",", "\[IndentingNewLine]", "Green", ",", "b2", 
+           ",", "\[IndentingNewLine]", "Yellow", ",", "b3"}], 
+          "\[IndentingNewLine]", "}"}], "]"}]}], ",", "\[IndentingNewLine]", 
+       RowBox[{"PlotRange", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1000"}], ",", " ", "1000"}], "}"}], ",", " ", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"-", "1000"}], ",", " ", "1000"}], "}"}]}], "}"}]}]}], 
+      "\[IndentingNewLine]", "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"mass1", ",", " ", "1000", ",", "\"\<Planet 1 Mass\>\""}], 
+        "}"}], ",", "100", ",", "100000", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"mass2", ",", " ", "100", ",", "\"\<Planet 2 Mass\>\""}], 
+        "}"}], ",", "100", ",", " ", "100000", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"{", 
+        RowBox[{"mass3", ",", " ", "100", ",", "\"\<Planet 3 Mass\>\""}], 
+        "}"}], ",", "100", ",", " ", "100000", ",", 
+       RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+     "\[IndentingNewLine]", 
+     RowBox[{"Grid", "[", 
+      RowBox[{"{", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Control", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"cond1", ",", " ", "1", ",", " ", "\"\<\>\""}], "}"}], 
+             ",", " ", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "1"}], "}"}]}], "}"}], "]"}], ",", " ", 
+          "\"\<Run\>\""}], "}"}], ",", "\[IndentingNewLine]", 
+        RowBox[{"{", 
+         RowBox[{"Button", "[", 
+          RowBox[{"\"\<Reset\>\"", ",", 
+           RowBox[{
+            RowBox[{"status", "=", 
+             RowBox[{"initStatus", "[", "]"}]}], ";", 
+            RowBox[{"cond1", "=", "0"}]}]}], "]"}], "}"}]}], 
+       "\[IndentingNewLine]", "}"}], "]"}], ",", "\[IndentingNewLine]", 
+     RowBox[{"Initialization", "\[RuleDelayed]", 
+      RowBox[{"(", "\[IndentingNewLine]", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"x1", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "1"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"x2", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ",", "1"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"x3", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"3", ",", "1"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"y1", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "2"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"y2", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ",", "2"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"y3", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"3", ",", "2"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"m1", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "3"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"m2", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ",", "3"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"m3", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"3", ",", "3"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"vel1", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"1", ",", "4"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"vel2", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"2", ",", "4"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"vel3", "[", "s_", "]"}], ":=", 
+         RowBox[{"s", "[", 
+          RowBox[{"[", 
+           RowBox[{"3", ",", "4"}], "]"}], "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"findForce", "[", 
+          RowBox[{"mass1_", ",", " ", "mass2_", ",", " ", "r_"}], "]"}], ":=", 
+         RowBox[{"(", 
+          RowBox[{"mass1", "*", 
+           RowBox[{"mass2", "/", 
+            RowBox[{"(", 
+             RowBox[{"r", "*", "r"}], ")"}]}]}], ")"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"findv1", "[", "s_", "]"}], ":=", "\[IndentingNewLine]", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "f1", ",", "f2", ",", "v1", ",", "v2", ",", "f", ",", "a", ",", 
+             "v"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"f1", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m1", "[", "s", "]"}], ",", 
+               RowBox[{"m2", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x1", "[", "s", "]"}], ",", 
+                   RowBox[{"y1", "[", "s", "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x2", "[", "s", "]"}], ",", 
+                   RowBox[{"y2", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"f2", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m1", "[", "s", "]"}], ",", 
+               RowBox[{"m3", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x1", "[", "s", "]"}], ",", 
+                   RowBox[{"y1", "[", "s", "]"}]}], "}"}], ",", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x3", "[", "s", "]"}], ",", 
+                   RowBox[{"y3", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"v1", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x2", "[", "s", "]"}], "-", 
+                 RowBox[{"x1", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y2", "[", "s", "]"}], "-", 
+                 RowBox[{"y1", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v2", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x3", "[", "s", "]"}], "-", 
+                 RowBox[{"x1", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y3", "[", "s", "]"}], "-", 
+                 RowBox[{"y1", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v1", " ", "=", 
+             RowBox[{"f1", "*", "v1"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v2", " ", "=", 
+             RowBox[{"f2", "*", "v2"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"f", "=", 
+             RowBox[{"v1", " ", "+", " ", "v2"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"a", "=", 
+             RowBox[{"f", "/", 
+              RowBox[{"m1", "[", "s", "]"}]}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v", "=", 
+             RowBox[{
+              RowBox[{"vel1", "[", "s", "]"}], " ", "+", " ", "a"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Return", "[", 
+             RowBox[{"N", "[", "v", "]"}], "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"findv2", "[", "s_", "]"}], ":=", "\[IndentingNewLine]", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "f1", ",", "f2", ",", "v1", ",", "v2", ",", "f", ",", "a", ",", 
+             "v"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"f1", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m2", "[", "s", "]"}], ",", 
+               RowBox[{"m1", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x2", "[", "s", "]"}], ",", 
+                   RowBox[{"y2", "[", "s", "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x1", "[", "s", "]"}], ",", 
+                   RowBox[{"y1", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"f2", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m2", "[", "s", "]"}], ",", 
+               RowBox[{"m3", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x2", "[", "s", "]"}], ",", 
+                   RowBox[{"y2", "[", "s", "]"}]}], "}"}], ",", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x3", "[", "s", "]"}], ",", 
+                   RowBox[{"y3", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"v1", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x1", "[", "s", "]"}], "-", 
+                 RowBox[{"x2", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y1", "[", "s", "]"}], "-", 
+                 RowBox[{"y2", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v2", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x3", "[", "s", "]"}], "-", 
+                 RowBox[{"x2", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y3", "[", "s", "]"}], "-", 
+                 RowBox[{"y2", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v1", " ", "=", 
+             RowBox[{"f1", " ", "*", "v1"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v2", " ", "=", 
+             RowBox[{"f2", " ", "*", "v2"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"f", "=", 
+             RowBox[{"v1", " ", "+", " ", "v2"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"a", "=", 
+             RowBox[{"f", "/", 
+              RowBox[{"m2", "[", "s", "]"}]}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v", "=", 
+             RowBox[{
+              RowBox[{"vel2", "[", "s", "]"}], "+", " ", "a"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Return", "[", 
+             RowBox[{"N", "[", "v", "]"}], "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"findv3", "[", "s_", "]"}], ":=", "\[IndentingNewLine]", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "f1", ",", "f2", ",", "v1", ",", "v2", ",", "f", ",", "a", ",", 
+             "v"}], "}"}], ",", "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"f1", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m3", "[", "s", "]"}], ",", 
+               RowBox[{"m1", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x3", "[", "s", "]"}], ",", 
+                   RowBox[{"y3", "[", "s", "]"}]}], "}"}], ",", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x1", "[", "s", "]"}], ",", 
+                   RowBox[{"y1", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"f2", "=", 
+             RowBox[{"findForce", "[", 
+              RowBox[{
+               RowBox[{"m3", "[", "s", "]"}], ",", 
+               RowBox[{"m2", "[", "s", "]"}], ",", 
+               RowBox[{"EuclideanDistance", "[", 
+                RowBox[{
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x3", "[", "s", "]"}], ",", 
+                   RowBox[{"y3", "[", "s", "]"}]}], "}"}], ",", " ", 
+                 RowBox[{"{", 
+                  RowBox[{
+                   RowBox[{"x2", "[", "s", "]"}], ",", 
+                   RowBox[{"y2", "[", "s", "]"}]}], "}"}]}], "]"}]}], "]"}]}],
+             ";", "\[IndentingNewLine]", 
+            RowBox[{"v1", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x1", "[", "s", "]"}], "-", 
+                 RowBox[{"x3", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y1", "[", "s", "]"}], "-", 
+                 RowBox[{"y3", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v2", "=", 
+             RowBox[{"Normalize", "[", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x2", "[", "s", "]"}], "-", 
+                 RowBox[{"x3", "[", "s", "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y2", "[", "s", "]"}], "-", 
+                 RowBox[{"y3", "[", "s", "]"}]}]}], "}"}], "]"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"v1", " ", "=", 
+             RowBox[{"f1", "*", "v1"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v2", " ", "=", 
+             RowBox[{"f2", "*", "v2"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"f", "=", 
+             RowBox[{"v1", " ", "+", " ", "v2"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"a", "=", 
+             RowBox[{"f", "/", 
+              RowBox[{"m3", "[", "s", "]"}]}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v", "=", 
+             RowBox[{
+              RowBox[{"vel3", "[", "s", "]"}], " ", "+", " ", "a"}]}], ";", 
+            "\[IndentingNewLine]", 
+            RowBox[{"Return", "[", 
+             RowBox[{"N", "[", "v", "]"}], "]"}], ";"}]}], 
+          "\[IndentingNewLine]", "]"}]}], ";", "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"step", "[", "s_", "]"}], ":=", "\[IndentingNewLine]", 
+         RowBox[{"Module", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"v1", ",", "v2", ",", "v3"}], "}"}], ",", 
+           "\[IndentingNewLine]", 
+           RowBox[{
+            RowBox[{"v1", "=", 
+             RowBox[{"findv1", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v2", "=", 
+             RowBox[{"findv2", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"v3", "=", 
+             RowBox[{"findv3", "[", "s", "]"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x1", "[", "s", "]"}], "+", 
+                 RowBox[{"v1", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y1", "[", "s", "]"}], "+", 
+                 RowBox[{"v1", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{"m1", "[", "s", "]"}], ",", " ", "v1"}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x2", "[", "s", "]"}], "+", 
+                 RowBox[{"v2", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y2", "[", "s", "]"}], "+", 
+                 RowBox[{"v2", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{"m2", "[", "s", "]"}], ",", " ", "v2"}], "}"}], ",", 
+              "\[IndentingNewLine]", 
+              RowBox[{"{", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"x3", "[", "s", "]"}], "+", 
+                 RowBox[{"v3", "[", 
+                  RowBox[{"[", "1", "]"}], "]"}]}], ",", 
+                RowBox[{
+                 RowBox[{"y3", "[", "s", "]"}], "+", 
+                 RowBox[{"v3", "[", 
+                  RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                RowBox[{"m3", "[", "s", "]"}], ",", " ", "v3"}], "}"}]}], 
+             "}"}]}]}], "\[IndentingNewLine]", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{
+         RowBox[{"initStatus", "[", "]"}], ":=", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "0", ",", "mass1", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "0"}], "}"}]}], "}"}], "\[IndentingNewLine]", 
+           "\t   ", ",", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"-", "500"}], ",", "0", ",", "mass2", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", "20"}], "}"}]}], "}"}], "\[IndentingNewLine]",
+            "\t   ", ",", 
+           RowBox[{"{", 
+            RowBox[{"500", ",", "0", ",", "mass3", ",", 
+             RowBox[{"{", 
+              RowBox[{"0", ",", 
+               RowBox[{"-", "20"}]}], "}"}]}], "}"}]}], "}"}]}], ";"}], 
+       "\[IndentingNewLine]", "\[IndentingNewLine]", ")"}]}]}], 
+    "\[IndentingNewLine]", "]"}]}], "\[IndentingNewLine]", "]"}]], "Input",
+ CellChangeTimes->{{3.658129104047945*^9, 3.658129237852453*^9}, {
+  3.658129274336011*^9, 3.6581292756950827`*^9}, {3.6581293709932866`*^9, 
+  3.6581294407932286`*^9}, {3.658129494525671*^9, 3.658129537620877*^9}, {
+  3.6581297298470154`*^9, 3.6581297338266196`*^9}, {3.6581298377525244`*^9, 
+  3.658129890621281*^9}, {3.658129990273509*^9, 3.6581300083687296`*^9}, {
+  3.658130461089393*^9, 3.658130488089486*^9}, {3.658130608135522*^9, 
+  3.658130628540965*^9}, {3.6581307036255207`*^9, 3.6581307081548576`*^9}, {
+  3.658130813844573*^9, 3.6581308365534935`*^9}, {3.658130884678028*^9, 
+  3.6581309033288*^9}, {3.65813123365372*^9, 3.658131236374597*^9}, {
+  3.6583593227456455`*^9, 3.658359325511421*^9}, {3.6583595842172213`*^9, 
+  3.6583595957617884`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`cond1$$ = 0, $CellContext`mass1$$ = 
+    100., $CellContext`mass2$$ = 100., $CellContext`mass3$$ = 100., 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`mass1$$], 1000, "Planet 1 Mass"}, 100, 100000}, {{
+       Hold[$CellContext`mass2$$], 100, "Planet 2 Mass"}, 100, 100000}, {{
+       Hold[$CellContext`mass3$$], 100, "Planet 3 Mass"}, 100, 100000}, {{
+       Hold[$CellContext`cond1$$], 1, ""}, {0, 1}}, {
+      Hold[
+       Grid[{{
+          Manipulate`Place[1], "Run"}, {
+          Button[
+          "Reset", $CellContext`status$25722 = $CellContext`initStatus[]; \
+$CellContext`cond1$$ = 0]}}]], Manipulate`Dump`ThisIsNotAControl}}, 
+    Typeset`size$$ = {360., {178., 182.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    False, $CellContext`mass1$25723$$ = 0, $CellContext`mass2$25724$$ = 
+    0, $CellContext`mass3$25725$$ = 0, $CellContext`cond1$25726$$ = False}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     2, StandardForm, 
+      "Variables" :> {$CellContext`cond1$$ = 1, $CellContext`mass1$$ = 
+        1000, $CellContext`mass2$$ = 100, $CellContext`mass3$$ = 100}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`mass1$$, $CellContext`mass1$25723$$, 0], 
+        Hold[$CellContext`mass2$$, $CellContext`mass2$25724$$, 0], 
+        Hold[$CellContext`mass3$$, $CellContext`mass3$25725$$, 0], 
+        Hold[$CellContext`cond1$$, $CellContext`cond1$25726$$, False]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Show[If[$CellContext`cond1$$ == 
+          
+          1, $CellContext`status$25722 = \
+$CellContext`step[$CellContext`status$25722]]; $CellContext`b1 = Disk[{
+            $CellContext`x1[$CellContext`status$25722], 
+            $CellContext`y1[$CellContext`status$25722]}, 50]; $CellContext`b2 = 
+         Disk[{
+            $CellContext`x2[$CellContext`status$25722], 
+            $CellContext`y2[$CellContext`status$25722]}, 50]; $CellContext`b3 = 
+         Disk[{
+            $CellContext`x3[$CellContext`status$25722], 
+            $CellContext`y3[$CellContext`status$25722]}, 50]; 
+        Graphics[{
+          Blue, $CellContext`b1, Green, $CellContext`b2, 
+           Yellow, $CellContext`b3}], 
+        PlotRange -> {{-1000, 1000}, {-1000, 1000}}], 
+      "Specifications" :> {{{$CellContext`mass1$$, 1000, "Planet 1 Mass"}, 
+         100, 100000, Appearance -> 
+         "Labeled"}, {{$CellContext`mass2$$, 100, "Planet 2 Mass"}, 100, 
+         100000, Appearance -> 
+         "Labeled"}, {{$CellContext`mass3$$, 100, "Planet 3 Mass"}, 100, 
+         100000, Appearance -> "Labeled"}, {{$CellContext`cond1$$, 1, ""}, {0,
+          1}, ControlPlacement -> 1}, 
+        Grid[{{
+           Manipulate`Place[1], "Run"}, {
+           Button[
+           "Reset", $CellContext`status$25722 = $CellContext`initStatus[]; \
+$CellContext`cond1$$ = 0]}}]}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {274., 281.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    Initialization:>(($CellContext`x1[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 1, 1]; $CellContext`x2[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 2, 1]; $CellContext`x3[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 3, 1]; $CellContext`y1[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 1, 2]; $CellContext`y2[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 2, 2]; $CellContext`y3[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 3, 2]; $CellContext`m1[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 1, 3]; $CellContext`m2[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 2, 3]; $CellContext`m3[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 3, 3]; $CellContext`vel1[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 1, 4]; $CellContext`vel2[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 2, 4]; $CellContext`vel3[
+         Pattern[$CellContext`s, 
+          Blank[]]] := Part[$CellContext`s, 3, 4]; $CellContext`findForce[
+         Pattern[$CellContext`mass1, 
+          Blank[]], 
+         Pattern[$CellContext`mass2, 
+          Blank[]], 
+         Pattern[$CellContext`r, 
+          
+          Blank[]]] := $CellContext`mass1 ($CellContext`mass2/($CellContext`r \
+$CellContext`r)); $CellContext`findv1[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`f1, $CellContext`f2, $CellContext`v1, \
+$CellContext`v2, $CellContext`f, $CellContext`a, $CellContext`v}, \
+$CellContext`f1 = $CellContext`findForce[
+            $CellContext`m1[$CellContext`s], 
+            $CellContext`m2[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x1[$CellContext`s], 
+              $CellContext`y1[$CellContext`s]}, {
+              $CellContext`x2[$CellContext`s], 
+              $CellContext`y2[$CellContext`s]}]]; $CellContext`f2 = \
+$CellContext`findForce[
+            $CellContext`m1[$CellContext`s], 
+            $CellContext`m3[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x1[$CellContext`s], 
+              $CellContext`y1[$CellContext`s]}, {
+              $CellContext`x3[$CellContext`s], 
+              $CellContext`y3[$CellContext`s]}]]; $CellContext`v1 = 
+          Normalize[{$CellContext`x2[$CellContext`s] - \
+$CellContext`x1[$CellContext`s], $CellContext`y2[$CellContext`s] - \
+$CellContext`y1[$CellContext`s]}]; $CellContext`v2 = 
+          Normalize[{$CellContext`x3[$CellContext`s] - \
+$CellContext`x1[$CellContext`s], $CellContext`y3[$CellContext`s] - \
+$CellContext`y1[$CellContext`s]}]; $CellContext`v1 = $CellContext`f1 \
+$CellContext`v1; $CellContext`v2 = $CellContext`f2 $CellContext`v2; \
+$CellContext`f = $CellContext`v1 + $CellContext`v2; $CellContext`a = \
+$CellContext`f/$CellContext`m1[$CellContext`s]; $CellContext`v = \
+$CellContext`vel1[$CellContext`s] + $CellContext`a; Return[
+           N[$CellContext`v]]; Null]; $CellContext`findv2[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`f1, $CellContext`f2, $CellContext`v1, \
+$CellContext`v2, $CellContext`f, $CellContext`a, $CellContext`v}, \
+$CellContext`f1 = $CellContext`findForce[
+            $CellContext`m2[$CellContext`s], 
+            $CellContext`m1[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x2[$CellContext`s], 
+              $CellContext`y2[$CellContext`s]}, {
+              $CellContext`x1[$CellContext`s], 
+              $CellContext`y1[$CellContext`s]}]]; $CellContext`f2 = \
+$CellContext`findForce[
+            $CellContext`m2[$CellContext`s], 
+            $CellContext`m3[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x2[$CellContext`s], 
+              $CellContext`y2[$CellContext`s]}, {
+              $CellContext`x3[$CellContext`s], 
+              $CellContext`y3[$CellContext`s]}]]; $CellContext`v1 = 
+          Normalize[{$CellContext`x1[$CellContext`s] - \
+$CellContext`x2[$CellContext`s], $CellContext`y1[$CellContext`s] - \
+$CellContext`y2[$CellContext`s]}]; $CellContext`v2 = 
+          Normalize[{$CellContext`x3[$CellContext`s] - \
+$CellContext`x2[$CellContext`s], $CellContext`y3[$CellContext`s] - \
+$CellContext`y2[$CellContext`s]}]; $CellContext`v1 = $CellContext`f1 \
+$CellContext`v1; $CellContext`v2 = $CellContext`f2 $CellContext`v2; \
+$CellContext`f = $CellContext`v1 + $CellContext`v2; $CellContext`a = \
+$CellContext`f/$CellContext`m2[$CellContext`s]; $CellContext`v = \
+$CellContext`vel2[$CellContext`s] + $CellContext`a; Return[
+           N[$CellContext`v]]; Null]; $CellContext`findv3[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`f1, $CellContext`f2, $CellContext`v1, \
+$CellContext`v2, $CellContext`f, $CellContext`a, $CellContext`v}, \
+$CellContext`f1 = $CellContext`findForce[
+            $CellContext`m3[$CellContext`s], 
+            $CellContext`m1[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x3[$CellContext`s], 
+              $CellContext`y3[$CellContext`s]}, {
+              $CellContext`x1[$CellContext`s], 
+              $CellContext`y1[$CellContext`s]}]]; $CellContext`f2 = \
+$CellContext`findForce[
+            $CellContext`m3[$CellContext`s], 
+            $CellContext`m2[$CellContext`s], 
+            EuclideanDistance[{
+              $CellContext`x3[$CellContext`s], 
+              $CellContext`y3[$CellContext`s]}, {
+              $CellContext`x2[$CellContext`s], 
+              $CellContext`y2[$CellContext`s]}]]; $CellContext`v1 = 
+          Normalize[{$CellContext`x1[$CellContext`s] - \
+$CellContext`x3[$CellContext`s], $CellContext`y1[$CellContext`s] - \
+$CellContext`y3[$CellContext`s]}]; $CellContext`v2 = 
+          Normalize[{$CellContext`x2[$CellContext`s] - \
+$CellContext`x3[$CellContext`s], $CellContext`y2[$CellContext`s] - \
+$CellContext`y3[$CellContext`s]}]; $CellContext`v1 = $CellContext`f1 \
+$CellContext`v1; $CellContext`v2 = $CellContext`f2 $CellContext`v2; \
+$CellContext`f = $CellContext`v1 + $CellContext`v2; $CellContext`a = \
+$CellContext`f/$CellContext`m3[$CellContext`s]; $CellContext`v = \
+$CellContext`vel3[$CellContext`s] + $CellContext`a; Return[
+           N[$CellContext`v]]; Null]; $CellContext`step[
+         Pattern[$CellContext`s, 
+          Blank[]]] := 
+       Module[{$CellContext`v1, $CellContext`v2, $CellContext`v3}, \
+$CellContext`v1 = $CellContext`findv1[$CellContext`s]; $CellContext`v2 = \
+$CellContext`findv2[$CellContext`s]; $CellContext`v3 = \
+$CellContext`findv3[$CellContext`s]; {{$CellContext`x1[$CellContext`s] + 
+            Part[$CellContext`v1, 1], $CellContext`y1[$CellContext`s] + 
+            Part[$CellContext`v1, 2], 
+            $CellContext`m1[$CellContext`s], $CellContext`v1}, \
+{$CellContext`x2[$CellContext`s] + 
+            Part[$CellContext`v2, 1], $CellContext`y2[$CellContext`s] + 
+            Part[$CellContext`v2, 2], 
+            $CellContext`m2[$CellContext`s], $CellContext`v2}, \
+{$CellContext`x3[$CellContext`s] + 
+            Part[$CellContext`v3, 1], $CellContext`y3[$CellContext`s] + 
+            Part[$CellContext`v3, 2], 
+            $CellContext`m3[$CellContext`s], $CellContext`v3}}]; \
+$CellContext`initStatus[] := {{
+         0, 0, $CellContext`mass1$$, {0, 0}}, {-500, 
+          0, $CellContext`mass2$$, {0, 20}}, {
+         500, 0, $CellContext`mass3$$, {0, -20}}}; Null); 
+     Typeset`initDone$$ = True),
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.658130844082003*^9, 3.6581309039710193`*^9}, 
+   3.658131240906088*^9, 3.6583593295897617`*^9, 3.6583595124383554`*^9, 
+   3.6583595967742586`*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.658359785004687*^9, 3.658359794435956*^9}}]
+},
+WindowSize->{1366, 685},
+WindowMargins->{{-8, Automatic}, {Automatic, -8}},
+FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (December 4, 2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 21682, 527, 1852, "Input"],
+Cell[22265, 551, 11605, 225, 605, "Output"]
+}, Open  ]],
+Cell[33885, 779, 92, 1, 31, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
