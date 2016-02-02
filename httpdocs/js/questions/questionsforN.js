@@ -12,7 +12,7 @@ else {
 var cat1name = "1";            
 var cat2name = "2";            
 var cat3name = "3";                                 
-var cat11name = "None";            
+var cat11name = "None";
             
 
 var cat1 = ($("input[@name=q1]:checked").val() != "a"); 
